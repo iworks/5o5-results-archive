@@ -39,7 +39,8 @@ if ( is_front_page() && is_home() ) {
 										array(
 											'container'  => '',
 											'items_wrap' => '%3$s',
-											'theme_location' => 'primary',
+                                            'theme_location' => 'primary',
+                                            'depth' => 1,
 										)
                                     );
                                 }

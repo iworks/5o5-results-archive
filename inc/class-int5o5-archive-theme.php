@@ -19,13 +19,6 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 	public function __construct() {
 		parent::__construct();
 		/**
-		 * login class
-		 */
-		if ( $this->is_wp_login() ) {
-			include_once 'class-int5o5-archive-login.php';
-			new Int5o5_Archive_Login;
-		}
-		/**
 		 * hooks
 		 */
 		add_action( 'wp_head', [ $this, 'html_head' ], PHP_INT_MAX );
@@ -35,9 +28,6 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		add_action( 'parse_request', [ $this, 'browserconfig_xml' ] );
 		add_action( 'parse_request', [ $this, 'request_favicon' ] );
 		add_action( 'init', [ $this, 'register_scripts' ] );
-		/**
-		 * Add ID
-		 */
 		/**
 		 * speed
 		 */
@@ -120,13 +110,16 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 	 *
 	 * @since 1.0.0
 	 */
-	public function html_head() {
-		/**
-			* turn off iOS phone number scraping
-		 */
-		echo '<meta name="format-detection" content="telephone=no" />' . PHP_EOL;
-		echo '<meta name="msapplication-config" content="/browserconfig.xml" />' . PHP_EOL;
-	}
+    public function html_head() {
+        /**
+         * turn off iOS phone number scraping
+         */
+        echo '<meta name="format-detection" content="telephone=no" />' . PHP_EOL;
+        echo '<meta name="msapplication-config" content="/browserconfig.xml" />' . PHP_EOL;
+        if ( is_singular() && pings_open() ) {
+            printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
+        }
+    }
 
 	/**
 	 * get url

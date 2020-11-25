@@ -21,6 +21,15 @@ ul.test {
     }
 }
 
+@mixin title() {
+    margin: 30px 0 40px;
+    @include font_metropolis_light;
+    @include font( 30, 36 );
+    @media screen and ( max-width: $width_m ) {
+        @include font( 20, 24 );
+        text-align: center;
+    }
+}
 
 body {
     background-color: $white;
@@ -35,25 +44,15 @@ body {
         }
     }
     .page-header {
-        align-items: center;
-        display: flex;
-        @media screen and ( min-width: $width_x ) {
-            min-height: 300px;
+        .page-title {
+            @include title;
         }
-        justify-content: center;
-        text-align: center;
     }
     main {
         article {
             header {
                 .entry-title {
-                    margin: 30px 0 40px;
-                    @include font_metropolis_light;
-                    @include font( 30, 36 );
-                    @media screen and ( max-width: $width_m ) {
-                      @include font( 20, 24 );
-                      text-align: center;
-                    }
+                    @include title;
                 }
             }
         }
@@ -65,6 +64,38 @@ body {
         }
         &:hover {
             color: $color_alert;
+        }
+    }
+    &.search-results {
+        article {
+            header {
+                .entry-title {
+                    margin: 0;
+                    @include font( 14, 22 );
+                }
+            }
+            &.iworks_fleet_result,
+            &.iworks_fleet_boat {
+                .entry-title {
+                    a {
+                        padding-left: 1.2em;
+                        background: {
+                            @include icon( 'boat.svg' );
+                            size: auto 1em;
+                            repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+            &.iworks_fleet_result {
+                .entry-title {
+                    a {
+                        background: {
+                            @include icon( 'trophy.svg' );
+                        }
+                    }
+                }
+            }
         }
     }
 }

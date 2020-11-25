@@ -287,23 +287,18 @@ $font_root: 'assets/fonts/';
     padding: 8px 15px;
     @include font_metropolis_medium;
     @include font( 14, 17 );
-    &.link-add,
-    &.button-add {
-        &:before {
-            @include font_metropolis_bold;
-            content: "+";
-            padding-right: 5px;
-        }
-    }
 }
 
-@mixin button() {
+@mixin field() {
     @include link;
     border: 1px solid $color_01;
     @include radius;
+}
+
+@mixin button() {
+    @include field;
     background: {
         color: $color_01;
-        repeat: no-repeat;
     }
     color: $white;
     &:hover {
