@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package opi-jobs
+ * @package 5o5-results-archive
  */
 
 if ( ! function_exists( 'int505_archive_offer_expire_on' ) ) :
@@ -15,7 +15,7 @@ if ( ! function_exists( 'int505_archive_offer_expire_on' ) ) :
 		if ( in_array( get_post_status( $post_ID ), [ 'publish', 'preview' ] ) ) {
 			$date = get_post_meta( $post_ID, '_job_expires', true );
 			if ( empty( $date ) ) {
-				esc_html_e( 'No expiration date.', 'opi-jobs' );
+				esc_html_e( 'No expiration date.', '5o5-results-archive' );
 				return;
 			}
 			$date        = strtotime( $date );
@@ -27,7 +27,7 @@ if ( ! function_exists( 'int505_archive_offer_expire_on' ) ) :
 			);
 			$posted_on   = sprintf(
 				/* translators: %s: post date. */
-				esc_html_x( 'Offer expires on %s', 'post date', 'opi-jobs' ),
+				esc_html_x( 'Offer expires on %s', 'post date', '5o5-results-archive' ),
 				$time_string
 			);
 			echo '<span class="expires-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -57,7 +57,7 @@ if ( ! function_exists( 'int505_archive_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'opi-jobs' ),
+			esc_html_x( 'Posted on %s', 'post date', '5o5-results-archive' ),
 			$link ? '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>' : $time_string
 		);
 
@@ -73,7 +73,7 @@ if ( ! function_exists( 'int505_archive_posted_by' ) ) :
 	function int505_archive_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'opi-jobs' ),
+			esc_html_x( 'by %s', 'post author', '5o5-results-archive' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -90,17 +90,17 @@ if ( ! function_exists( 'int505_archive_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'opi-jobs' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', '5o5-results-archive' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'opi-jobs' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', '5o5-results-archive' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'opi-jobs' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', '5o5-results-archive' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'opi-jobs' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', '5o5-results-archive' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 
@@ -110,7 +110,7 @@ if ( ! function_exists( 'int505_archive_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'opi-jobs' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', '5o5-results-archive' ),
 						array(
 							'span' => array(
 								'class' => array(),

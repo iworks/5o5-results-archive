@@ -1,0 +1,95 @@
+@import '_mixin';
+
+body {
+    &.login {
+        h1 {
+            text-align: left;
+            @include short_width;
+            padding-bottom: 1em;
+            a {
+                @include reset;
+                @include font_metropolis_light;
+                @include font( 30, 40 );
+                color: $color_primary;
+                &:focus,
+                &:hover {
+                    cursor: default;
+                    color: $color_primary;
+                }
+                span {
+                    display: block;
+                    @include font_metropolis_semi_bold;
+                    &.delimiter {
+                        display: none;
+                    }
+                }
+            }
+        }
+        #login {
+            padding: 30px 0 100px;
+            @include short_width;
+            width: unset;
+            h1,
+            form,
+            #nav,
+            .message {
+                margin: 0;
+                max-width: 430px;
+                @media screen and ( max-width: 440px ) {
+                    width: 100%;
+                    padding: {
+                        left: 5px;
+                        right: 5px;
+                    }
+                }
+            }
+            form {
+                border: 0;
+                padding: 20px 20px 52px;
+                .input {
+                    &:focus {
+                        border-color: $color_01;
+                    }
+                }
+                input {
+                    &[type=submit] {
+                        border-color: $color_01;
+                        background-color: $color_01;
+                    }
+                }
+                .wp-pwd {
+                    .button {
+                        span {
+                            color: $color_01;
+                        }
+                    }
+                }
+            }
+        }
+        #backtoblog,
+        .privacy-policy-page-link {
+            display: none;
+        }
+        #nav {
+            margin-bottom: 100px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                &:first-of-type {
+                    @include button_reverse;
+                    margin-left: 10px;
+                }
+            }
+        }
+        &.login-action-lostpassword {
+            #nav {
+                a {
+                    @include button_reverse;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

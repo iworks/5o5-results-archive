@@ -1,0 +1,49 @@
+@import '../_mixin';
+
+body {
+    &.page-template-page-template-search {
+        #primary {
+            max-width: 100%;
+            @media screen and ( min-width: $width_m + 1 ) {
+                padding-left: 0;
+            }
+            header {
+                @include default_width;
+                @media screen and ( min-width: $width_m + 1 ) and ( max-width: $width_x + 10px ) {
+                  padding-left: 10px;
+                }
+            }
+            .entry-content {
+                display: flex;
+                @media screen and ( max-width: $width_m ) {
+                  flex-direction: column;
+                }
+                @media screen and ( min-width: $width_m + 1px ) {
+                  aside {
+                    padding-right: 20px;
+                    form {
+                        padding: 10px 15px 10px 10px;
+                    }
+                  }
+                }
+                @media screen and ( min-width: $width_l + 1px ) and ( max-width: $width_x + 10px ) {
+                  aside {
+                    form {
+                        padding: 10px 15px 10px 15px;
+                    }
+                  }
+                }
+                @media screen and ( min-width: $default_width + 11px ) {
+                    margin-right: calc( 50vw - #{ $default_width / 2 } );
+                    aside {
+                        padding-right: 20px;
+                        form {
+                            padding: 10px 15px 10px calc( 50vw - #{ $default_width / 2 });
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

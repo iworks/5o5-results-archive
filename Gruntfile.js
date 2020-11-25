@@ -30,7 +30,6 @@ module.exports = function( grunt ) {
       ],
       "assets/scripts/frontend.js": [
         "assets/scripts/src/frontend/navigation.js",
-        "assets/scripts/src/frontend/cookie-notice-front.js"
       ],
     },
 

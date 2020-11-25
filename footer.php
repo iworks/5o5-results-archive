@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package opi-jobs
+ * @package 5o5-results-archive
  */
 
 get_template_part( 'template-parts/site', 'footer' );

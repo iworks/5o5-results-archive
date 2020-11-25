@@ -1,6 +1,6 @@
 <?php
 
-abstract class OPI_Jobs {
+abstract class Int5o5_Archive {
 
 	/**
 	 * Theme url.

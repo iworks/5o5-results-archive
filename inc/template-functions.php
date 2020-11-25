@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package opi-jobs
+ * @package 5o5-results-archive
  */
 
 /**

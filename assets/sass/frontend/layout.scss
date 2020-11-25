@@ -1,0 +1,26 @@
+@import '_mixin';
+
+body {
+    &.post,
+    &.page {
+        margin: 0;
+    }
+}
+
+#primary,
+#secondary {
+    @include default_width;
+    min-width: $width_s;
+}
+
+.site-main {
+  @include main-padding-lr;
+}
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/front-page';
+@import 'layout/page-template-search';
+@import 'layout/login';
+
+

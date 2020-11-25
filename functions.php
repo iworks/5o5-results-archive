@@ -1,13 +1,13 @@
 <?php
 
 require_once get_template_directory() . '/inc/class-int5o5-archive-theme.php';
-new OPI_Jobs_Theme;
+new Int5o5_Archive_Theme;
 /**
- * opi-jobs functions and definitions
+ * 5o5-results-archive functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package opi-jobs
+ * @package 5o5-results-archive
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -27,10 +27,10 @@ if ( ! function_exists( 'int505_archive_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on opi-jobs, use a find and replace
-		 * to change 'opi-jobs' to the name of your theme in all the template files.
+		 * If you're building a theme based on 5o5-results-archive, use a find and replace
+		 * to change '5o5-results-archive' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'opi-jobs', get_template_directory() . '/languages' );
+		load_theme_textdomain( '5o5-results-archive', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -53,7 +53,7 @@ if ( ! function_exists( 'int505_archive_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary' => esc_html__( 'Primary', 'opi-jobs' ),
+				'primary' => esc_html__( 'Primary', '5o5-results-archive' ),
 			)
 		);
 
@@ -120,11 +120,6 @@ function int505_archive_content_width() {
 add_action( 'after_setup_theme', 'int505_archive_content_width', 0 );
 
 /**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -133,16 +128,4 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
 

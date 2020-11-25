@@ -1,0 +1,517 @@
+@import '_mixin';
+
+.site-header {
+    position: relative;
+    .site-header-one-container {
+        @include boxshadow( 0px 3px 6px transparentize( $black, 0.85 ) );
+        @media screen and ( min-width: #{ $width_m + 1px } ) {
+            @include main-padding-lr;
+        }
+    }
+    .site-header-one {
+        min-height: 70px;
+        @include default_width;
+        @media screen and ( min-width: #{ $width_m + 1px } ) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .site-branding {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .site-branding {
+        @media screen and ( max-width: $width_m ) {
+            @include main-padding-lr;
+            .site-description {
+                margin: 0;
+            }
+        }
+        .site-title {
+            padding-right: 10px;
+            a {
+                text-indent: -999em;
+                overflow: hidden;
+                display: block;
+                width: 50px;
+                height: 35px;
+                background: {
+                    @include image( 'logo.svg' );
+                    repeat: no-repeat;
+                    position: center 0;
+                    size: contain;
+                }
+            }
+        }
+        .site-description {
+            color: $color_01;
+            @media screen and ( min-width: #{ $width_m + 1px } ) {
+                max-width: 210px;
+            }
+            @include font_metropolis_light_italic;
+            @include font( 12, 14 );
+            strong, span {
+                display: block;
+            }
+        }
+    }
+    #site-navigation {
+        .menu-toggle {
+            @media screen and ( min-width: #{ $width_m + 1px } ) {
+                display: none;
+            }
+            width: 42px;
+            height: 40px;
+            border: 0;
+            @include radius(0);
+            background: {
+                color: $white;
+                repeat: no-repeat;
+                position: 50%;
+                @include icon( 'menu/open.svg' );
+            }
+            position: absolute;
+            top: 0;
+            right: 10px;
+            overflow: hidden;
+            text-indent: -999em;
+        }
+        &.toggled {
+            @media screen and ( max-width: $width_m ) {
+                background-color: $color_gray_1;
+                margin-top: 10px;
+                padding: 10px;
+                .menu-toggle {
+                    background: {
+                        @include icon( 'menu/close.svg' );
+                    }
+                }
+                #primary-menu {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    a {
+                        @include button_reverse;
+                        &.link-add {
+                            @include button;
+                            text-align: center;
+                        }
+                        display: block;
+                        margin: 10px auto;
+                        width: 200px;
+                        padding-left: 37px;
+                    }
+                    .children {
+                        display: block;
+                        a {
+                            background-image: none;
+                            display: flex;
+                            &:before {
+                                content: "";
+                                display: block;
+                                width: 20px;
+                                height: 14px;
+                                background: {
+                                    repeat: no-repeat;
+                                    position: 0 center;
+                                    size: contain;
+                                }
+                            }
+                            &.link-profile {
+                                &:before {
+                                    background: {
+                                        @include icon( 'person.svg' );
+                                    }
+                                }
+                            }
+                            &.link-dashboard {
+                                &:before {
+                                    background: {
+                                        @include icon( 'suitcase.svg' );
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .account {
+                        > {
+                            .link-profile {
+                                display: none;
+                            }
+                        }
+                        border: 0;
+                        display: block;
+                        position: static;
+                        .children {
+                            @include reset;
+                            display: block;
+                            position: inherit;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and ( max-width: $width_m ) {
+            #primary-menu {
+                display: none;
+            }
+        }
+        .button,
+        .link {
+            margin-left: 1em;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        .button {
+            &.button-profile,
+            &.button-dashboard {
+                @include button_reverse;
+                padding-left: 37px;
+                background: {
+                    @include icon( 'person.svg' );
+                    repeat: no-repeat;
+                    position: 14px center;
+                    size: 14px auto;
+                }
+                &:hover,
+                &.current-page {
+                    background: {
+                        @include icon( 'person-white.svg' );
+                    }
+                }
+            }
+            &.button-dashboard {
+                background: {
+                    @include icon( 'suitcase.svg' );
+                }
+                &:hover,
+                &.current-page {
+                    background: {
+                        @include icon( 'suitcase-white.svg' );
+                    }
+                }
+            }
+            &.current-page {
+                background-color: $color_accent;
+                color: $white;
+            }
+        }
+        .link {
+            @include link;
+            &.link-profile,
+            &.link-dashboard {
+                padding-left: 37px;
+                background: {
+                    @include icon( 'person.svg' );
+                    repeat: no-repeat;
+                    position: 14px center;
+                    size: 14px auto;
+                }
+            }
+            &.link-dashboard {
+                background: {
+                    @include icon( 'suitcase.svg' );
+                }
+            }
+        }
+        .account {
+            border-left: 1px solid $color_gray_3;
+            display: inline-block;
+            position: relative;
+            .children {
+                display: none;
+                position: absolute;
+                top: 2em;
+                background-color: $white;
+                border: 1px solid $color_01;
+                @include radius( 0 0 3px 3px );
+                @include boxshadow( 0px 3px 6px rgba( 0, 0, 0, .29 ) );
+            }
+            &:hover {
+                .children {
+                    display: block;
+                    padding: 4px 0;
+                    .link {
+                        background: none;
+                        margin: 0;
+                        display: block;
+                        padding: 4px 7px;
+                        &:after {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background-color: $color_gray_3;
+                        }
+                        &:last-child {
+                            &:after {
+                                display: none;
+                            }
+                        }
+                        &.current-page {
+                            background-color: $color_gray_3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+body {
+    &.logged-in {
+        .site-header {
+            #site-navigation {
+                .account {
+                    > {
+                        .link-profile {
+                            span {
+                                padding-right: 20px;
+                                background: {
+                                    @include icon( 'arrow-down.svg' );
+                                    repeat: no-repeat;
+                                    position: 100% center;
+                                    size: 13px auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.home {
+        .site-header {
+            &:after {
+                content: "";
+                display: block;
+                height: 200px;
+                background: {
+                    image: url(#{$image_root}backgrounds/people.svg?v=#{$version}), url(#{$image_root}backgrounds/net-1440.jpg?v=#{$version});
+                    size: 1135px auto, cover;
+                    position: 50% 100%, 50% 50%;
+                    repeat: no-repeat;
+                }
+              @media screen and (max-width: $width_m) {
+                  background-size: 90% auto, cover;
+              }
+            }
+        }
+    }
+}
+/** menu */
+ul {
+    &.primary-menu {
+        @include reset;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin: -0.8rem 0 0 -1.6rem;
+    }
+
+    .icon {
+        display: block;
+        height: 0.7rem;
+        position: absolute;
+        pointer-events: none;
+        transform: rotate(-45deg);
+        width: 1.3rem;
+
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            background-color: currentColor;
+            position: absolute;
+            bottom: calc(50% - 0.1rem);
+            left: 0;
+        }
+    }
+}
+
+.primary-menu .icon::before {
+    height: 0.9rem;
+    width: 0.2rem;
+}
+
+.primary-menu .icon::after {
+    height: 0.2rem;
+    width: 0.9rem;
+}
+
+.primary-menu li {
+    font-size: inherit;
+    line-height: 1.25;
+    position: relative;
+}
+
+.primary-menu > li {
+    margin: 0.8rem 0 0 1.6rem;
+}
+
+.primary-menu > li.menu-item-has-children > a {
+    padding-right: 2rem;
+}
+
+.primary-menu > li > .icon {
+    right: -0.5rem;
+    top: calc(50% - 0.4rem);
+}
+
+.primary-menu a {
+    color: inherit;
+    display: block;
+    line-height: 1.2;
+    text-decoration: none;
+    word-break: normal;
+    word-wrap: normal;
+}
+
+.primary-menu a:hover,
+.primary-menu a:focus,
+.primary-menu .current_page_ancestor {
+    text-decoration: underline;
+}
+
+.primary-menu li.current-menu-item > a,
+.primary-menu li.current-menu-item > .link-icon-wrapper > a {
+    text-decoration: underline;
+}
+
+.primary-menu li.current-menu-item > a:hover,
+.primary-menu li.current-menu-item > .link-icon-wrapper > a:hover,
+.primary-menu li.current-menu-item > a:focus,
+.primary-menu li.current-menu-item > .link-icon-wrapper > a:focus {
+    text-decoration: none;
+}
+
+/* SUB MENU */
+
+.primary-menu ul {
+    @include reset;
+    border: 1px solid $color_01;
+    background-color: $white;
+    opacity: 0;
+    position: absolute;
+    right: 9999rem;
+    top: calc(100% + 2rem);
+    transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
+    transform: translateY(0.6rem);
+    width: 8rem;
+    z-index: 1;
+}
+
+.primary-menu li.menu-item-has-children:hover > ul,
+.primary-menu li.menu-item-has-children:focus > ul,
+.primary-menu li.menu-item-has-children.focus > ul {
+    right: 0;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.15s linear, transform 0.15s linear;
+}
+
+.primary-menu ul::before,
+.primary-menu ul::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 100%;
+}
+
+.primary-menu ul::before {
+    left: 0;
+    right: 0;
+}
+
+.primary-menu ul::after {
+    border: 0.8rem solid transparent;
+    border-bottom-color: #000;
+    right: 1.8rem;
+}
+
+.primary-menu ul a {
+    background: transparent;
+    border: none;
+    color: inherit;
+    display: block;
+    padding: 5px;
+    transition: background-color 0.15s linear;
+    width: 100%;
+}
+
+.primary-menu ul li.menu-item-has-children > a {
+    padding-right: 4.5rem;
+}
+
+.primary-menu ul li.menu-item-has-children .icon {
+    position: absolute;
+    right: 1.5rem;
+    top: calc(50% - 0.5rem);
+}
+
+/* DEEP DOWN */
+
+.primary-menu ul ul {
+    top: -1rem;
+}
+
+.primary-menu ul li.menu-item-has-children:hover > ul,
+.primary-menu ul li.menu-item-has-children:focus > ul,
+.primary-menu ul li.menu-item-has-children.focus > ul {
+    right: calc(100% + 2rem);
+}
+
+.primary-menu ul ul::before {
+    bottom: 0;
+    height: auto;
+    left: auto;
+    right: -2rem;
+    top: 0;
+    width: 2rem;
+}
+
+.primary-menu ul ul::after {
+    border-bottom-color: transparent;
+
+    /*rtl:ignore*/
+    border-left-color: #000;
+    bottom: auto;
+    right: -1.6rem;
+    top: 2rem;
+}
+
+.rtl .primary-menu ul ul::after {
+    transform: rotate(180deg);
+}
+
+/*
+ * Enable nav submenu expansion with tapping on arrows on large-viewport
+ * touch interfaces (e.g. tablets or laptops with touch screens).
+ * These rules are supported by all browsers (>IE11) and when JS is disabled.
+ */
+@media (any-pointer: coarse) {
+
+    .primary-menu > li.menu-item-has-children > a {
+        padding-right: 0;
+        margin-right: 2rem;
+    }
+
+    .primary-menu ul li.menu-item-has-children > a {
+        margin-right: 4.5rem;
+        padding-right: 0;
+        width: unset;
+    }
+
+}
+
+/* Repeat previous rules for IE11 (when JS enabled for polyfill). */
+body.touch-enabled .primary-menu > li.menu-item-has-children > a {
+    padding-right: 0;
+    margin-right: 2rem;
+}
+
+body.touch-enabled .primary-menu ul li.menu-item-has-children > a {
+    margin-right: 4.5rem;
+    padding-right: 0;
+    width: unset;
+}

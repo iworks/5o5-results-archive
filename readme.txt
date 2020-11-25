@@ -26,7 +26,7 @@ Description
 
 = Does this theme support any plugins? =
 
-opi-jobs includes support for WooCommerce and for Infinite Scroll in Jetpack.
+5o5-results-archive includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

@@ -2,7 +2,7 @@
 
 require_once 'class-int5o5-archive.php';
 
-class OPI_Jobs_Login extends OPI_Jobs {
+class Int5o5_Archive_Login extends Int5o5_Archive {
 	public function __construct() {
 		parent::__construct();
 		// add_action( 'signup_header', array( $this, 'output' ), 99 );
@@ -27,7 +27,7 @@ class OPI_Jobs_Login extends OPI_Jobs {
 	 * @since 1.0.0
 	 */
 	public function enqueue() {
-		wp_enqueue_style( 'opi-jobs-style', get_stylesheet_uri(), array(), $this->version );
+		wp_enqueue_style( '5o5-results-archive-style', get_stylesheet_uri(), array(), $this->version );
 	}
 
 	public function header() {
@@ -54,7 +54,7 @@ class OPI_Jobs_Login extends OPI_Jobs {
 			'/>[^<]+</',
 			sprintf(
 				'>%s<',
-				esc_html__( 'You do not have an account - register', 'opi-jobs' )
+				esc_html__( 'You do not have an account - register', '5o5-results-archive' )
 			),
 			$register
 		);

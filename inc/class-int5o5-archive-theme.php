@@ -2,7 +2,7 @@
 
 require_once 'class-int5o5-archive.php';
 
-class OPI_Jobs_Theme extends OPI_Jobs {
+class Int5o5_Archive_Theme extends Int5o5_Archive {
 
 	/**
 	 * Configuration for:
@@ -14,7 +14,7 @@ class OPI_Jobs_Theme extends OPI_Jobs {
 	private $color_title      = '#2d2683';
 	private $color_theme      = '#ffffff';
 	private $color_background = '#ffffff';
-	private $short_name       = 'Baza Ogłoszeń';
+	private $short_name       = '5o5 Archive';
 
 	public function __construct() {
 		parent::__construct();
@@ -23,14 +23,7 @@ class OPI_Jobs_Theme extends OPI_Jobs {
 		 */
 		if ( $this->is_wp_login() ) {
 			include_once 'class-int5o5-archive-login.php';
-			new OPI_Jobs_Login;
-		}
-		/**
-		 * Cookie Class
-		 */
-		if ( ! is_admin() ) {
-			include_once 'class-int5o5-archive-cookie-notice.php';
-			new OPI_Jobs_Cookie_Notice;
+			new Int5o5_Archive_Login;
 		}
 		/**
 		 * hooks
@@ -42,17 +35,9 @@ class OPI_Jobs_Theme extends OPI_Jobs {
 		add_action( 'parse_request', [ $this, 'browserconfig_xml' ] );
 		add_action( 'parse_request', [ $this, 'request_favicon' ] );
 		add_action( 'init', [ $this, 'register_scripts' ] );
-		add_filter( 'login_headertext', [ $this, 'login_headertext' ] );
 		/**
 		 * Add ID
 		 */
-		add_filter( 'login_url', [ $this, 'add_id_to_url' ] );
-		add_filter( 'register_url', [ $this, 'add_id_to_url' ] );
-		add_filter( 'lostpassword_url', [ $this, 'add_id_to_url' ] );
-		add_action( 'register_form', [ $this, 'add_id_to_form' ] );
-		add_action( 'lostpassword_form', [ $this, 'add_id_to_form' ] );
-		add_action( 'resetpass_form', [ $this, 'add_id_to_form' ] );
-		add_action( 'login_form', [ $this, 'add_id_to_form' ] );
 		/**
 		 * speed
 		 */
@@ -76,79 +61,21 @@ class OPI_Jobs_Theme extends OPI_Jobs {
 		add_filter( 'get_the_generator_export', '__return_empty_string' );
 	}
 
-	public function add_id_to_url( $url ) {
-		$id = filter_input( INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT );
-		if ( ! empty( $id ) ) {
-			$url = add_query_arg( 'id', $id, $url );
-		}
-		return $url;
-	}
-
-	/**
-	 * Add hidden input on login related forms
-	 */
-	public function add_id_to_form() {
-		$id = filter_input( INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT );
-		if ( empty( $id ) ) {
-			$id = filter_input( INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT );
-		}
-		$id = intval( $id );
-		if ( 1 > $id ) {
-			return;
-		}
-		printf( '<input type="hidden" name="id" value="%d" />', $id );
-	}
-
-	public function login_headertext( $text ) {
-		$action = filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STRING );
-		$id     = filter_input( INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT );
-
-		switch ( $action ) {
-			case '':
-				$text = esc_html( _x( 'Login', 'login form title', 'opi-jobs' ) );
-				break;
-			case 'register':
-				$text = esc_html( _x( 'Register', 'login form title', 'opi-jobs' ) );
-				break;
-			case 'lostpassword':
-				$text = esc_html( _x( 'Lost Password', 'login form title', 'opi-jobs' ) );
-				break;
-
-		}
-		if ( 0 < $id && get_option( 'job_manager_submit_job_form_page_id', true ) === $id ) {
-			return sprintf(
-				'%s<span class="delimiter"> &ndash; </span><span>%s</span>',
-				esc_html__( 'Submit Listing', 'opi-jobs' ),
-				$text
-			);
-		}
-		return $text;
-	}
-
 	/**
 	 * Enqueue scripts and styles.
 	 *
 	 * @since 1.0.0
 	 */
 	public function enqueue() {
-		wp_enqueue_style( 'opi-jobs-style', get_stylesheet_uri(), [ 'select2' ], $this->version );
-		wp_style_add_data( 'opi-jobs-style', 'rtl', 'replace' );
-		wp_enqueue_script( 'opi-jobs' );
+		wp_enqueue_style( '5o5-results-archive-style', get_stylesheet_uri(), [], $this->version );
 	}
 
 	public function register_scripts() {
 		/**
-		 * select2
-		 */
-		$file = $this->url . '/assets/externals/select2/css/select2.min.css';
-		wp_register_style( 'select2', $file, false, '4.0.3' );
-		$file = $this->url . '/assets/externals/select2/js/select2.full.min.js';
-		wp_register_script( 'select2', $file, array( 'jquery' ), '4.0.3' );
-		/**
 		 * theme
 		 */
 		wp_register_script(
-			'opi-jobs',
+			'5o5-results-archive',
 			$this->url . sprintf( '/assets/scripts/frontend.%sjs', $this->debug ? '' : 'min.' ),
 			[ 'jquery', 'select2' ],
 			$this->version,
@@ -158,12 +85,7 @@ class OPI_Jobs_Theme extends OPI_Jobs {
 			'ajaxurl' => admin_url( 'admin-ajax.php' ),
 		);
 		$data = apply_filters( 'wp_localize_script_int505_archive_theme', $data );
-		wp_localize_script( 'opi-jobs', 'int505_archive_theme', $data );
-		/**
-		 * datepicker
-		 */
-		$file = $this->url . '/assets/externals/datepicker/css/jquery-ui-datepicker.css';
-		wp_register_style( 'jquery-ui-datepicker', $file, false, '1.12.1' );
+		wp_localize_script( '5o5-results-archive', 'int505_archive_theme', $data );
 	}
 
 	/**

@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package opi-jobs
+ * @package 5o5-results-archive
  */
 
 get_header();

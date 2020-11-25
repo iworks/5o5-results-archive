@@ -1,0 +1,17 @@
+@import '_mixin';
+
+body {
+    &.home {
+        .entry-title {
+            @include font_metropolis_light;
+            margin: 44px 0 36px;
+            @media screen and ( max-width: $width_m ) {
+              margin-top: 17px;
+              margin-bottom: 20px;
+              text-align: center;
+            }
+        }
+    }
+}
+
+

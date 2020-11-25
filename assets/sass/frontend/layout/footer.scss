@@ -1,0 +1,58 @@
+@import '_mixin';
+
+.site-footer {
+    color: $white;
+    background-color: $color_01;
+    padding: 11px;
+    @media screen and (max-width: $width_m) {
+          padding: 0;
+    }
+    .site-info {
+        @include default_width;
+        display: flex;
+        justify-content: space-between;
+        @include font( 12, 30 );
+        @media screen and (max-width: $width_m) {
+          flex-direction: column;
+        }
+        > {
+            div {
+                display: flex;
+                align-items: center;
+                @media screen and (max-width: $width_m) {
+                  justify-content: center;
+                }@include main-padding-lr;
+                &.site-info-right {
+                    justify-content: flex-end;
+                }
+            }
+        }
+        a {
+            color: $white;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            text-indent: -999em;
+            overflow: hidden;
+            opacity: .4;
+            background: {
+                repeat: no-repeat;
+                size: contain;
+            }
+            &:hover {
+                opacity: 1;
+            }
+            &.int {
+                background: {
+                    @include image( 'logos/5o5-int.svg' );
+                }
+            }
+            &.pl {
+                background: {
+                    @include image( 'logos/5o5-pl.svg' );
+                }
+            }
+        }
+
+    }
+}

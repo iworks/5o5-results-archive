@@ -22,18 +22,19 @@ if ( is_front_page() && is_home() ) {
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 	<?php
 }
-$description = get_bloginfo( 'description', 'display' );
-if ( $description || is_customize_preview() ) {
 ?>
-                    <p class="site-description"><?php echo $description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-                <?php } ?>
+<p class="site-description">
+    <strong><?php esc_html_e( 'sailors, boats & results', '5o5-results-archive' ); ?></strong>
+    <span><?php esc_html_e( 'through the ages', '5o5-results-archive' ); ?></span>
+</p>
             </div><!-- .site-branding -->
+            <div class="search"><?php get_search_form(); ?></div>
 			<nav id="site-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'opi-jobs' ); ?></button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '5o5-results-archive' ); ?></button>
                 <div id="primary-menu">
+<?php if ( has_nav_menu( 'primary' ) ) { ?>
+                    <ul class="primary-menu reset-list-style">
 <?php
-								if ( has_nav_menu( 'primary' ) ) {
-
 									wp_nav_menu(
 										array(
 											'container'  => '',
@@ -43,6 +44,7 @@ if ( $description || is_customize_preview() ) {
                                     );
                                 }
 ?>
+                    </ul>
 				</div>
 			</nav>
         </div>

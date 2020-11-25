@@ -1,0 +1,442 @@
+/**
+ * Images version, increase it when you change any background image.
+ */
+$version: THEME_VERSION;
+$au: 1.618;
+
+$width: 100%;
+
+$width_s: 320px;
+$width_m: 768px;
+$width_l: 1024px;
+$width_x: 1180px;
+
+$default_width: $width_x;
+
+$white: #fff;
+$black: #000;
+
+/**
+ * colors
+ */
+
+$color_primary: #2a2d2e;
+$color_accent: #f77f00;
+$color_alert: #d62828;
+
+$color_01: #003049;
+$color_02: #002442;
+
+$color_gray_1: #f5f5f5;
+$color_gray_2: #707070;
+$color_gray_3: #ddd;
+
+/**
+ * Links
+ */
+$color_visited: #015;
+$color_hover:   #c20;
+
+/**
+ * radius
+ */
+$default_radius: 4px;
+
+/**
+ * Images
+ */
+
+$image_root: 'assets/images/';
+
+@mixin image( $image ) {
+    image: url(#{$image_root}#{$image}?v=#{$version});
+}
+
+@mixin icon( $image ) {
+    @include image( 'icons/#{$image}' );
+}
+
+@mixin default_width() {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    max-width: $default_width;
+    @media print {
+        max-width: 100%;
+    }
+}
+
+@mixin short_width() {
+    @include default_width;
+    max-width: 880px;
+    @media screen and ( max-width: #{ $width_s + 1px } ) {
+        max-width: 300px;
+    }
+}
+
+@mixin boxsizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin transition( $trans ) {
+    -webkit-transition: $trans;
+    -moz-transition: $trans;
+    -ms-transition: $trans;
+    -o-transition: $trans;
+    transition: $trans;
+}
+
+@mixin column($col) {
+    width: $width/12*$col;
+}
+
+@mixin radius( $radius: $default_radius ) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin boxshadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin textshadow( $shadow ) {
+    text-shadow: $shadow;
+    -webkit-text-shadow: $shadow;
+    -moz-text-shadow: $shadow;
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+@mixin hide {
+    opacity: 0;
+    @include transition(opacity 0.4s);
+}
+@mixin show {
+    opacity: 1;
+    @include transition(opactiy 0.4s);
+}
+@mixin columns($columns) {
+    -webkit-columns: $columns;
+    -moz-columns: $columns;
+    columns: $columns;
+}
+@mixin reset() {
+    background: transparent none;
+    border: 0;
+    bottom: auto;
+    color: inherit;
+    display: inline;
+    font: {
+        size: 100%;
+        family: 'Open Sans', sans-serif;
+        style: normal;
+        weight: 200;
+    }
+    left: auto;
+    line-height: $au;
+    list-style: none;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    position: static;
+    right: auto;
+    top: auto;
+    @include boxshadow( none );
+    @include radius( 0 );
+    width: unset;
+    height: unset;
+    text-indent: unset;
+}
+
+@mixin background_size( $size)  {
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    -o-background-size: $size;
+    background-size: $size;
+}
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin block_absolute() {
+    bottom: 0;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+@mixin random_border_color() {
+    border: 1px solid rgb(random(255),random(255),random(255));
+}
+
+@mixin link_active() {
+    text-decoration: none;
+    color: $color_orange;
+    &:visited {
+        color: $color_visited;
+    }
+    &:hover {
+        color: $color_hover;
+    }
+    &:active {
+        color: $color_orange;
+    }
+}
+
+/**
+ * fonts
+ */
+
+$font_root: 'assets/fonts/';
+
+@mixin font_metropolis() {
+    font: {
+        family: 'Metropolis Regular', sans-serif;
+        variant-ligatures: none;
+        weight: 400;
+    }
+}
+@mixin font_metropolis_italic() {
+    @include font_metropolis;
+    font: {
+        family: 'Metropolis Regular Italic', sans-serif;
+        style: normal;
+    }
+    /* font-weight: 200; */
+}
+
+@mixin font_metropolis_light() {
+    @include font_metropolis;
+    font-family: 'Metropolis Light', sans-serif;
+    /* font-weight: 200; */
+}
+
+@mixin font_metropolis_light_italic() {
+    @include font_metropolis;
+    font: {
+        family: 'Metropolis Light Italic', sans-serif;
+        style: normal;
+    }
+    /* font-weight: 200; */
+}
+
+@mixin font_metropolis_regular() {
+    @include font_metropolis;
+}
+
+@mixin font_metropolis_regular_italic() {
+    @include font_metropolis_italic;
+}
+
+@mixin font_metropolis_normal() {
+    @include font_metropolis;
+}
+
+@mixin font_metropolis_medium() {
+    @include font_metropolis;
+    font-family: 'Metropolis Medium', sans-serif;
+    /* font-weight: 500; */
+}
+
+@mixin font_metropolis_semi_bold() {
+    @include font_metropolis;
+    font-family: 'Metropolis Semi Bold', sans-serif;
+    /* font-weight: 700; */
+}
+
+@mixin font_metropolis_bold() {
+    @include font_metropolis;
+    font-family: 'Metropolis Bold', sans-serif;
+    /* font-weight: 700; */
+}
+
+@mixin font( $size, $line: au ) {
+    font-size: #{$size}px;
+    @if $size == $line {
+        line-height: 1;
+    } @else {
+        @if au == $line {
+            $line: $size * $au;
+        }
+        line-height: #{$line}px;
+    }
+}
+
+@mixin link() {
+    color: $color_01;
+    padding: 8px 15px;
+    @include font_metropolis_medium;
+    @include font( 14, 17 );
+    &.link-add,
+    &.button-add {
+        &:before {
+            @include font_metropolis_bold;
+            content: "+";
+            padding-right: 5px;
+        }
+    }
+}
+
+@mixin button() {
+    @include link;
+    border: 1px solid $color_01;
+    @include radius;
+    background: {
+        color: $color_01;
+        repeat: no-repeat;
+    }
+    color: $white;
+    &:hover {
+        background-color: $white;
+        color: $color_01;
+        cursor: pointer;
+    }
+}
+
+@mixin button_reverse() {
+    @include button;
+    color: $color_01;
+    background-color: $white;
+    border: 1px solid $color_01;
+    &:hover {
+        background-color: $color_01;
+        color: $white;
+    }
+}
+
+@mixin button_before_image() {
+    &:before {
+        display: block;
+        display: inline-block;
+        width: 27px;
+        height: 17px;
+        content: "";
+        background: {
+            repeat: no-repeat;
+            position: 0 center;
+            size: 14px auto;
+        }
+    }
+}
+
+@mixin grid( $columns: 1 ) {
+    display: grid;
+    column-gap: 9px;
+    grid-template-columns: repeat( #{ $columns }, 1fr );
+}
+
+@mixin a_color_primary() {
+    a {
+        color: $color_primary;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        &:focus {
+            border-bottom: 1px dashed $color_primary;
+        }
+    }
+}
+
+@mixin a_color_blue() {
+    a {
+        color: $color_01;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        &:focus {
+            border-bottom: 1px dashed $color_01;
+        }
+    }
+}
+
+@mixin job_header() {
+    .entry-header {
+        position: relative;
+        h1,
+        .job-institution {
+            margin-bottom: 57px;
+            @media print {
+                margin-bottom: 10px;
+            }
+            @media screen and ( max-width: $width_m ) {
+              margin-bottom: 29px;
+            }
+        }
+        h1 {
+            @include font_metropolis_light;
+            @include font( 30, 40 );
+            @media screen and ( max-width: $width_m ) {
+              @include font( 20, 24 );
+            }
+        }
+        .job-institution {
+            color: $color_01;
+            @include font( 18, 28 );
+            @media screen and ( max-width: $width_m ) {
+              text-align: center;
+              margin-bottom: 15px;
+              @include font( 14, 28 );
+            }
+            .job-institution-name {
+                @include font_metropolis_light;
+            }
+            .job-institution-division {
+                @include font_metropolis_medium;
+            }
+        }
+        .job-company-logo {
+            @media screen and ( min-width: #{ $width_m + 1px } ) {
+                position: absolute;
+                top: 2em;
+                right: 20px;
+                width: 200px;
+                background: {
+                    position: 100% 0;
+                }
+            }
+            height: 120px;
+            background: {
+                repeat: no-repeat;
+                size: contain;
+                position: 50%;
+            }
+            @media print {
+                display: none;
+            }
+        }
+    }
+}
+
+@mixin main-padding-lr() {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@mixin job_listing_pending() {
+    @include short_width;
+    padding: 10px 20px;
+    border: 2px dashed $color_01;
+    @include radius( 10px );
+    @include job_header;
+    h1 {
+        margin-top: 0;
+    }
+}

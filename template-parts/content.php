@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package opi-jobs
+ * @package 5o5-results-archive
  */
 
 ?>
@@ -37,7 +37,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'opi-jobs' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', '5o5-results-archive' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -50,7 +50,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'opi-jobs' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '5o5-results-archive' ),
 				'after'  => '</div>',
 			)
 		);
