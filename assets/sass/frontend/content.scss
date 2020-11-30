@@ -60,7 +60,7 @@ body {
     a {
         color: $color_01;
         &:visited {
-            color: $color_primary;
+            color: lighten( $color_01, 10 );
         }
         &:hover {
             color: $color_alert;

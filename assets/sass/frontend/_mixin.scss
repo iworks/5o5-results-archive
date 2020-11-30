@@ -342,11 +342,16 @@ $font_root: 'assets/fonts/';
 
 @mixin a_color_primary() {
     a {
-        color: $color_primary;
         text-decoration: none;
+        color: $color_primary;
         border-bottom: 1px solid transparent;
         &:focus {
             border-bottom: 1px dashed $color_primary;
+        }
+    }
+    table {
+        a {
+            text-decoration: underline;
         }
     }
 }
