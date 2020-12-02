@@ -56,6 +56,17 @@ body {
                 }
             }
         }
+        .navigation {
+            &.pagination {
+                max-width: 400px;
+                margin: 0 auto;
+                padding-bottom: 1em;
+                .nav-links {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
     }
     a {
         color: $color_01;
@@ -92,6 +103,7 @@ footer {
         }
     }
 }
+
 
 @import 'content/login';
 @import 'content/forms';

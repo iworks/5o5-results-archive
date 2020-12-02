@@ -7,10 +7,20 @@ body {
             td, th {
                 background-color: $color_01;
             }
+            .sum {
+                text-align: right;
+            }
+        }
+        td, th {
+                padding: 2px 5px;
         }
         td {
             &.place {
                 padding-right: 10px;
+            }
+            &.race {
+                width: 3em;
+                text-align: center;
             }
         }
     }
