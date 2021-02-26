@@ -32,6 +32,7 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		 */
 		if ( class_exists( 'iWorks_PWA' ) ) {
 			add_filter( 'iworks_pwa_configuration', array( $this, 'iworks_pwa_configuration' ) );
+			add_filter( 'iworks_pwa_offline_svg', array( $this, 'iworks_pwa_offline_svg' ) );
 		} else {
 			add_action( 'parse_request', array( $this, 'manifest_json' ) );
 		}
@@ -60,6 +61,11 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 
 	public function iworks_pwa_configuration( $data ) {
 		return wp_parse_args( $this->manifest_json_data(), $data );
+	}
+
+	public function iworks_pwa_offline_svg( $svg ) {
+		$svg = file_get_contents( get_stylesheet_directory() . '/assets/images/logos/pwa.svg' );
+		return $svg;
 	}
 
 	/**

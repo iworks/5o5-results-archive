@@ -1,15 +1,15 @@
-# <!=Copyright (C) 2020 Waldemar Więckowski
+# <!=Copyright (C) 2021 Waldemar Więckowski
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: 5o5 Results Archive 0.0.2.1606723665621\n"
+"Project-Id-Version: 5o5 Results Archive 0.0.2.1614356921524\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/5o5-results-archive\n"
-"POT-Creation-Date: 2020-11-30 08:07:45+00:00\n"
+"POT-Creation-Date: 2021-02-26 16:28:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
