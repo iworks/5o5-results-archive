@@ -1,0 +1,555 @@
+# <!=Copyright (C) 2020 Waldemar Więckowski
+# This file is distributed under the GNU General Public License v2 or later.=!>
+msgid ""
+msgstr ""
+"Project-Id-Version: OPI Jobs 0.0.1.1599813946548\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/5o5-results-"
+"archive\n"
+"POT-Creation-Date: 2020-11-25 19:43:54+00:00\n"
+"PO-Revision-Date: 2020-11-19 13:31+0100\n"
+"Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
+"Language-Team: \n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Niestety, nie udało się znaleźć wybranej strony."
+
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Jak widać nie bardzo jest co wyświetlić w tym miejscu. Może warto spróbować "
+"poszukać lub użyć odnośników?"
+
+#: 404.php:30
+msgid "Most Used Categories"
+msgstr "Najczęściej używane kategorie"
+
+#. translators: %1$s: smiley
+#: 404.php:48
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Proszę spróbować w archiwum miesięcznym. %1$s"
+
+#: functions.php:56
+msgid "Primary"
+msgstr "Główny"
+
+#: header.php:25
+msgid "Skip to content"
+msgstr "Przejdź do treści"
+
+#: inc/template-tags.php:18
+msgid "No expiration date."
+msgstr "Brak daty wygaśnięcia."
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:93
+msgid ", "
+msgstr ", "
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:96
+msgid "Posted in %1$s"
+msgstr "Opublikowany w %s"
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:103
+msgid "Tagged %1$s"
+msgstr "Tagi %1$s"
+
+#. translators: %s: post title
+#: inc/template-tags.php:113
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Zostaw komentarz<span class=\"screen-reader-text\"> do %s</span>"
+
+#. translators: %s: search query.
+#: search.php:21
+msgid "Search Results for: %s"
+msgstr "Wyniki wyszukiwania dla: %s"
+
+#: single.php:19
+msgid "Previous:"
+msgstr "Poprzedni:"
+
+#: single.php:20
+msgid "Next:"
+msgstr "Następny:"
+
+#: template-parts/5o5-archive.php:15
+#, fuzzy
+msgid "Search:"
+msgstr "Szukaj"
+
+#. translators: %s: Number of search results.
+#: template-parts/5o5-archive.php:22
+#, fuzzy
+msgid "We found %s result for your search."
+msgid_plural "We found %s results for your search."
+msgstr[0] "Doprecyzuj wyszukiwanie"
+msgstr[1] "Doprecyzuj wyszukiwanie"
+msgstr[2] "Doprecyzuj wyszukiwanie"
+
+#: template-parts/5o5-archive.php:31
+msgid ""
+"We could not find any results for your search. You can give it another try "
+"through the search form below."
+msgstr ""
+
+#: template-parts/5o5-archive.php:75
+msgid "Number"
+msgstr ""
+
+#: template-parts/5o5-archive.php:76
+msgid "Hull"
+msgstr ""
+
+#: template-parts/5o5-archive.php:77
+msgid "Last known owner"
+msgstr ""
+
+#: template-parts/5o5-archive.php:118
+msgid "search again"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Niczego nie znaleziono"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Czy można już opublikować pierwszy wpis? <a href=\"%1$s\">można zacząć "
+"tutaj</a>."
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Przepraszamy, ale niczego nie znaleźliśmy. Proszę spróbować inną frazę."
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Wygląda na to, że szukana strona nie istnieje. Być może warto jej poszukać."
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:40
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Czytaj dalej<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: template-parts/content.php:53
+msgid "Pages:"
+msgstr "Strony:"
+
+#: template-parts/not-authorized.php:2
+msgid "Your account is not authorized to manage listing."
+msgstr "Twoje konto nie pozwala na zarządzanie ogłoszeniami."
+
+#: template-parts/pagination.php:21
+#, fuzzy
+msgid "Newer <span class=\"nav-short\">Posts</span>"
+msgstr "Edytuj <span class=\"screen-reader-text\">%s</span>"
+
+#: template-parts/pagination.php:25
+#, fuzzy
+msgid "Older <span class=\"nav-short\">Posts</span>"
+msgstr "Edytuj <span class=\"screen-reader-text\">%s</span>"
+
+#: template-parts/site-footer.php:7
+msgid "International 5O5 Sailing"
+msgstr ""
+
+#: template-parts/site-footer.php:8
+msgid "Polish 5O5 Sailing"
+msgstr ""
+
+#: template-parts/site-header.php:27
+#, fuzzy
+msgid "sailors, boats & results"
+msgstr "Filtruj wyniki"
+
+#: template-parts/site-header.php:28
+msgid "through the ages"
+msgstr ""
+
+#: template-parts/site-header.php:33
+msgid "Primary Menu"
+msgstr "Menu główne"
+
+#. Theme Name of the plugin/theme
+msgid "5o5 Results Archive"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://iworks.pl/5o5-results-archive"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Waldemar Więckowski"
+msgstr "Waldemar Wieckowski"
+
+#. translators: %s: post date.
+#: inc/template-tags.php:30
+msgctxt "post date"
+msgid "Offer expires on %s"
+msgstr "Oferta wygasa: %s"
+
+#. translators: %s: post date.
+#: inc/template-tags.php:60
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Ogłoszenie dodano: %s"
+
+#. translators: %s: post author.
+#: inc/template-tags.php:76
+msgctxt "post author"
+msgid "by %s"
+msgstr "przez %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:100
+msgctxt "list item separator"
+msgid ", "
+msgstr ", "
+
+#~ msgid "You do not have an account - register"
+#~ msgstr "Nie masz konta - zarejestruj się"
+
+#~ msgid "Submit Listing"
+#~ msgstr "Dodaj ogłoszenie"
+
+#~ msgctxt "login form title"
+#~ msgid "Login"
+#~ msgstr "Logowanie"
+
+#~ msgctxt "login form title"
+#~ msgid "Register"
+#~ msgstr "Rejestracja"
+
+#~ msgctxt "login form title"
+#~ msgid "Lost Password"
+#~ msgstr "Odzyskiwanie hasła"
+
+#~ msgid ""
+#~ "We use cookies and similar technologies to provide services and to gather "
+#~ "information for statistical and other purposes. You can change the way "
+#~ "you want the cookies to be stored or accessed on your device in the "
+#~ "settings of your browser. If you do not agree, change the settings of "
+#~ "your browser. For more information, refer to our %s."
+#~ msgstr ""
+#~ "Używamy plików cookies, aby ułatwić Ci korzystanie z naszego serwisu oraz "
+#~ "do celów statystycznych. Jeśli nie blokujesz tych plików, to zgadzasz się "
+#~ "na ich użycie oraz zapisanie w pamięci urządzenia. Pamiętaj, że możesz "
+#~ "samodzielnie zarządzać cookies, zmieniając ustawienia przeglądarki. "
+#~ "Więcej informacji znajdziesz w naszej %s."
+
+#~ msgid "Close cookie information."
+#~ msgstr "Zamknij informację o ciasteczkach."
+
+#~ msgid "Close cookie information"
+#~ msgstr "Zamknij informację o ciasteczkach"
+
+#~ msgid "There are no listings matching your search."
+#~ msgstr "Brak ogłoszeń spełniających wprowadzone kryteria."
+
+#~ msgid "W tej sytuacji polecamy:"
+#~ msgstr "W tej sytuacji polecamy:"
+
+#~ msgid "Sprawdzić poprawność wpisanego słowa kluczowego"
+#~ msgstr "Sprawdzić poprawność wpisanego słowa kluczowego"
+
+#~ msgid "Zmienić lub <a>wyczyścić</a> filtry wyszukiwania"
+#~ msgstr "Zmienić lub <a>wyczyścić</a> filtry wyszukiwania"
+
+#~ msgid "This listing has expired."
+#~ msgstr "Ogłoszenie wygasło."
+
+#~ msgid "remove"
+#~ msgstr "usuń"
+
+#~ msgid "You do not have any active listings."
+#~ msgstr "Nie masz żadnej aktywnej oferty."
+
+#~ msgid "Keywords"
+#~ msgstr "Słowo kluczowe"
+
+#~ msgid "Academy"
+#~ msgstr "Uczelnia"
+
+#~ msgid "Start typing the name of the university"
+#~ msgstr "Zacznij wpisywać nazwę uczelni"
+
+#~ msgid "Field of science"
+#~ msgstr "Obszar nauki"
+
+#~ msgid "Any Field of Science"
+#~ msgstr "Dowolny obszar nauki"
+
+#~ msgid "Select"
+#~ msgstr "Wybierz"
+
+#~ msgid "Voivodeship"
+#~ msgstr "Województwo"
+
+#~ msgid "Any Voivodeship"
+#~ msgstr "Dowolne województwo"
+
+#~ msgid "City"
+#~ msgstr "Miasto"
+
+#~ msgid "Search across %d listing"
+#~ msgid_plural "Search across %d listings"
+#~ msgstr[0] "Szukaj wśród %d ogłoszenia"
+#~ msgstr[1] "Szukaj wśród %d ogłoszeń"
+#~ msgstr[2] "Szukaj wśród %d ogłoszeń"
+
+#~ msgid ""
+#~ "Your browser does not support JavaScript, or it is disabled. JavaScript "
+#~ "must be enabled in order to view listings."
+#~ msgstr ""
+#~ "Twoja przeglądarka nie obsługuje JavaScript. Obsługa JavaScript musi być "
+#~ "włączona, aby wyświetlać ogłoszenia."
+
+#~ msgid "You are editing an existing job. %s"
+#~ msgstr "Edytujesz istniejącą ofertę. %s"
+
+#~ msgid "Create A New Job"
+#~ msgstr "Nowa oferta"
+
+#~ msgid "Fields marked <strong>*</strong> are required"
+#~ msgstr "Pola oznaczone <strong>*</strong> są wymagane"
+
+#~ msgid "required"
+#~ msgstr "wymagane"
+
+#~ msgid "optional"
+#~ msgstr "opcjonalne"
+
+#~ msgid "I accept <a href=\"%s\">the terms and conditions of the site</a>."
+#~ msgstr "Akceptuję <a href=\"%s\">Regulamin bazy ogłoszeń</a>."
+
+#~ msgid ""
+#~ "The data administrator is the National Information Processing Institute - "
+#~ "National Research Institute its seat in Warsaw."
+#~ msgstr ""
+#~ "Administratorem danych jest Ośrodek Przetwarzania Informacji Państwowy "
+#~ "Instytut Badawczy z siedzibą w Warszawie."
+
+#~ msgid ""
+#~ " The data provided in the form are processed in order to handle the "
+#~ "inquiry."
+#~ msgstr " Dane podane w formularzu przetwarzane są w celu obsługi zapytania."
+
+#~ msgid ""
+#~ "Detailed information on the processing of personal data is available <a "
+#~ "href=\"%s\">here</a>."
+#~ msgstr ""
+#~ "Szczegółowe informacje na temat przetwarzania danych osobowych dostępne "
+#~ "są <a href=\"%s\">tutaj</a>."
+
+#~ msgid "Save Draft"
+#~ msgstr "Zapisz szkic"
+
+#~ msgid ""
+#~ "%1$s listed successfully. To view your listing <a href=\"%2$s\">click "
+#~ "here</a>."
+#~ msgstr ""
+#~ "%1$s listed successfully. To view your listing <a href=\"%2$s\">click "
+#~ "here</a>."
+
+#~ msgid "Thank you for adding your listing."
+#~ msgstr "Dziękujemy za dodanie ogłoszenia."
+
+#~ msgid "The listing will be published after approval by the administrator."
+#~ msgstr ""
+#~ "Ogłoszenie zostanie opublikowane po zatwierdzeniu przez administratora."
+
+#~ msgid "Listing preview"
+#~ msgstr "Podgląd"
+
+#~ msgid "we found %d listing"
+#~ msgid_plural "we found %d listings"
+#~ msgstr[0] "znaleźliśmy %d ogłoszenie"
+#~ msgstr[1] "znaleźliśmy %d ogłoszenia"
+#~ msgstr[2] "znaleźliśmy %d ogłoszeń"
+
+#~ msgid "we have <b>not found</b> any ads that meet the given criteria"
+#~ msgstr "<b>nie znaleźliśmy</b> ogłoszeń spełniających podane kryteria"
+
+#~ msgid "E-mail"
+#~ msgstr "E-mail"
+
+#~ msgid "- select -"
+#~ msgstr "- wybierz -"
+
+#~ msgid "-- there is no my institution --"
+#~ msgstr "-- nie ma mojej instytucji --"
+
+#~ msgid "Institution"
+#~ msgstr "Instytucja"
+
+#~ msgid "-- there is no my division --"
+#~ msgstr "-- nie ma mojej jednostki --"
+
+#~ msgid "Division"
+#~ msgstr "Wydział"
+
+#~ msgid "Enter division name"
+#~ msgstr "Wprowadź nazwę jednostki"
+
+#~ msgid "Old password"
+#~ msgstr "Aktualne hasło"
+
+#~ msgid "New Password"
+#~ msgstr "Nowe hasło"
+
+#~ msgid "Retype new password"
+#~ msgstr "Powtórz nowe hasło"
+
+#~ msgid "Save changes"
+#~ msgstr "Zapisz zmiany"
+
+#~ msgid "Cancel"
+#~ msgstr "Anuluj"
+
+#~ msgid "Related jobs"
+#~ msgstr "Podobne ogłoszenia"
+
+#~ msgid "https://www.gov.pl/web/gov/deklaracja-dostepnosci-serwisu-govpl"
+#~ msgstr "https://www.gov.pl/web/gov/deklaracja-dostepnosci-serwisu-govpl"
+
+#~ msgid "Accessibility declaration"
+#~ msgstr "Deklaracja dostępności"
+
+#~ msgid "https://opi.org.pl/en/"
+#~ msgstr "https://opi.org.pl/"
+
+#~ msgid "Design and development"
+#~ msgstr "Projekt i wykonanie"
+
+#~ msgid "ordered by"
+#~ msgstr "na zamówienie"
+
+#~ msgid "https://www.gov.pl/web/science"
+#~ msgstr "https://www.gov.pl/web/nauka"
+
+#~ msgid "Ministry of Science and Higher Education"
+#~ msgstr "Ministerstwo Nauki i Szkolnictwa Wyższego"
+
+#~ msgid "Your account"
+#~ msgstr "Twoje konto"
+
+#~ msgid "Logout"
+#~ msgstr "Wyloguj się"
+
+#~ msgid "OPI Jobs"
+#~ msgstr "OPI Oferty pracy"
+
+#~ msgid "https://opi.org.pl/"
+#~ msgstr "https://opi.org.pl/"
+
+#~ msgid "Search filter page"
+#~ msgstr "Strona z filtrowaniem wyników"
+
+#~ msgid "User Profile"
+#~ msgstr "Twój profil"
+
+#~ msgctxt "in cookie message, mayby propoer form"
+#~ msgid "Privacy Policy"
+#~ msgstr "Polityce Prywatności"
+
+#~ msgctxt "job dashboard button"
+#~ msgid "Edit"
+#~ msgstr "Edytuj"
+
+#~ msgctxt "job dashboard button"
+#~ msgid "Mark not filled"
+#~ msgstr "Nie obsadzone"
+
+#~ msgctxt "job dashboard button"
+#~ msgid "Mark filled"
+#~ msgstr "Obsadzone"
+
+#~ msgctxt "job dashboard button"
+#~ msgid "Duplicate"
+#~ msgstr "Powiel"
+
+#~ msgctxt "job dashboard button"
+#~ msgid "Relist"
+#~ msgstr "Wznów"
+
+#~ msgctxt "job dashboard button"
+#~ msgid "Delete"
+#~ msgstr "Archiwizuj"
+
+#~ msgctxt "job dashboard button"
+#~ msgid "Continue Submission"
+#~ msgstr "Wznów"
+
+#~ msgctxt "job dashboard button - pending"
+#~ msgid "Edit"
+#~ msgstr "Edytuj"
+
+#~ msgctxt "button on preview screen"
+#~ msgid "Submit Listing"
+#~ msgstr "Dodaj ogłoszenie"
+
+#~ msgctxt "button on preview screen"
+#~ msgid "Edit Listing"
+#~ msgstr "Wróć do edycji"
+
+#~ msgid "Announcement"
+#~ msgstr "Ogłoszenie"
+
+#~ msgid "Category"
+#~ msgstr "Kategoria"
+
+#~ msgid "Any category"
+#~ msgstr "Dowolna kategoria"
+
+#~ msgid "Company Details"
+#~ msgstr "Szczegóły firmy"
+
+#~ msgid "Sidebar"
+#~ msgstr "Panel boczny"
+
+#~ msgid "Add widgets here."
+#~ msgstr "Tutaj można dodać widżety."
+
+#, fuzzy
+#~ msgid "Any city"
+#~ msgstr "Dowolna kategoria"
+
+#~ msgid "One thought on &ldquo;%1$s&rdquo;"
+#~ msgstr "Jeden komentarz  do &ldquo;%1$s&rdquo;"
+
+#~ msgid "Comments are closed."
+#~ msgstr "Komentowanie jest wyłączone."
+
+#, fuzzy
+#~ msgctxt "comments title"
+#~ msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "%1$s komentarz do &ldquo;%2$s&rdquo;"
+#~ msgstr[1] ""
+#~ msgstr[2] ""

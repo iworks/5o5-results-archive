@@ -12,8 +12,8 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 	 * @since 1.0.0
 	 */
 	private $color_title      = '#2d2683';
-	private $color_theme      = '#ffffff';
-	private $color_background = '#ffffff';
+	private $color_theme      = '#000000';
+	private $color_background = '#f0f0ff';
 	private $short_name       = '5o5 Archive';
 
 	public function __construct() {
@@ -21,22 +21,29 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		/**
 		 * hooks
 		 */
-		add_action( 'wp_head', [ $this, 'html_head' ], PHP_INT_MAX );
-		add_filter( 'get_site_icon_url', [ $this, 'get_site_default_icon_url' ], 10, 3 );
-		add_filter( 'site_icon_meta_tags', [ $this, 'site_icon_meta_tags' ] );
-		add_action( 'parse_request', [ $this, 'manifest_json' ] );
-		add_action( 'parse_request', [ $this, 'browserconfig_xml' ] );
-		add_action( 'parse_request', [ $this, 'request_favicon' ] );
-		add_action( 'init', [ $this, 'register_scripts' ] );
+		add_action( 'wp_head', array( $this, 'html_head' ), PHP_INT_MAX );
+		add_filter( 'get_site_icon_url', array( $this, 'get_site_default_icon_url' ), 10, 3 );
+		add_filter( 'site_icon_meta_tags', array( $this, 'site_icon_meta_tags' ) );
+		add_action( 'parse_request', array( $this, 'browserconfig_xml' ) );
+		add_action( 'parse_request', array( $this, 'request_favicon' ) );
+		add_action( 'init', array( $this, 'register_scripts' ) );
+		/**
+		 * manifest.json
+		 */
+		if ( class_exists( 'iWorks_PWA' ) ) {
+			add_filter( 'iworks_pwa_configuration', array( $this, 'iworks_pwa_configuration' ) );
+		} else {
+			add_action( 'parse_request', array( $this, 'manifest_json' ) );
+		}
 		/**
 		 * speed
 		 */
-		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue' ], PHP_INT_MAX );
-		add_action( 'wp_enqueue_scripts', [ $this, 'dequeue_scripts' ], PHP_INT_MAX );
-		add_action( 'wp_enqueue_scripts', [ $this, 'dequeue_styles' ], PHP_INT_MAX );
-		add_action( 'wp_footer', [ $this, 'dequeue_styles' ], PHP_INT_MAX ); // WPML maybe_late_enqueue_template()
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ), PHP_INT_MAX );
+		add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_scripts' ), PHP_INT_MAX );
+		add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_styles' ), PHP_INT_MAX );
+		add_action( 'wp_footer', array( $this, 'dequeue_styles' ), PHP_INT_MAX ); // WPML maybe_late_enqueue_template()
 		add_filter( 'emoji_svg_url', '__return_false' );
-		add_filter( 'wp_resource_hints', [ $this, 'resource_hints' ], 10, 2 );
+		add_filter( 'wp_resource_hints', array( $this, 'resource_hints' ), 10, 2 );
 		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 		remove_action( 'wp_print_styles', 'print_emoji_styles' );
 		/**
@@ -51,13 +58,17 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		add_filter( 'get_the_generator_export', '__return_empty_string' );
 	}
 
+	public function iworks_pwa_configuration( $data ) {
+		return wp_parse_args( $this->manifest_json_data(), $data );
+	}
+
 	/**
 	 * Enqueue scripts and styles.
 	 *
 	 * @since 1.0.0
 	 */
 	public function enqueue() {
-		wp_enqueue_style( '5o5-results-archive-style', get_stylesheet_uri(), [], $this->version );
+		wp_enqueue_style( '5o5-results-archive-style', get_stylesheet_uri(), array(), $this->version );
 	}
 
 	public function register_scripts() {
@@ -67,7 +78,7 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		wp_register_script(
 			'5o5-results-archive',
 			$this->url . sprintf( '/assets/scripts/frontend.%sjs', $this->debug ? '' : 'min.' ),
-			[ 'jquery', 'select2' ],
+			array( 'jquery', 'select2' ),
 			$this->version,
 			true
 		);
@@ -110,16 +121,16 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 	 *
 	 * @since 1.0.0
 	 */
-    public function html_head() {
-        /**
-         * turn off iOS phone number scraping
-         */
-        echo '<meta name="format-detection" content="telephone=no" />' . PHP_EOL;
-        echo '<meta name="msapplication-config" content="/browserconfig.xml" />' . PHP_EOL;
-        if ( is_singular() && pings_open() ) {
-            printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
-        }
-    }
+	public function html_head() {
+		/**
+		 * turn off iOS phone number scraping
+		 */
+		echo '<meta name="format-detection" content="telephone=no" />' . PHP_EOL;
+		echo '<meta name="msapplication-config" content="/browserconfig.xml" />' . PHP_EOL;
+		if ( is_singular() && pings_open() ) {
+			printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
+		}
+	}
 
 	/**
 	 * get url
@@ -254,20 +265,8 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		exit;
 	}
 
-	/**
-	 * Handle "/manifest.json" request.
-	 *
-	 * @since 1.0.0
-	 */
-	public function manifest_json() {
-		if (
-			! isset( $_SERVER['REQUEST_URI'] ) ) {
-			return;
-		}
-		if ( '/manifest.json' !== $_SERVER['REQUEST_URI'] ) {
-			return;
-		}
-		$data = array(
+	private function manifest_json_data() {
+		return array(
 			'name'             => get_bloginfo( 'sitename' ),
 			'short_name'       => $this->short_name,
 			'theme_color'      => $this->color_theme,
@@ -315,8 +314,23 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 			),
 			'splash_pages'     => null,
 		);
+	}
+
+	/**
+	 * Handle "/manifest.json" request.
+	 *
+	 * @since 1.0.0
+	 */
+	public function manifest_json() {
+		if (
+			! isset( $_SERVER['REQUEST_URI'] ) ) {
+			return;
+		}
+		if ( '/manifest.json' !== $_SERVER['REQUEST_URI'] ) {
+			return;
+		}
 		header( 'Content-Type: application/json' );
-		echo json_encode( $data );
+		echo json_encode( $this->manifest_json_data() );
 		exit;
 	}
 

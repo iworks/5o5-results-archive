@@ -1,0 +1,221 @@
+# <!=Copyright (C) 2020 Waldemar Więckowski
+# This file is distributed under the GNU General Public License v2 or later.=!>
+msgid ""
+msgstr ""
+"Project-Id-Version: 5o5 Results Archive 0.0.2.1606723665621\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/theme/5o5-results-archive\n"
+"POT-Creation-Date: 2020-11-30 08:07:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the "
+"links below or a search?"
+msgstr ""
+
+#: 404.php:30
+msgid "Most Used Categories"
+msgstr ""
+
+#: 404.php:48
+#. translators: %1$s: smiley
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: functions.php:56
+msgid "Primary"
+msgstr ""
+
+#: header.php:25
+msgid "Skip to content"
+msgstr ""
+
+#: inc/template-tags.php:18
+msgid "No expiration date."
+msgstr ""
+
+#: inc/template-tags.php:93
+#. translators: used between list items, there is a space after the comma
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:96
+#. translators: 1: list of categories.
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/template-tags.php:103
+#. translators: 1: list of tags.
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/template-tags.php:113
+#. translators: %s: post title
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: search.php:21
+#. translators: %s: search query.
+msgid "Search Results for: %s"
+msgstr ""
+
+#: single.php:19
+msgid "Previous:"
+msgstr ""
+
+#: single.php:20
+msgid "Next:"
+msgstr ""
+
+#: template-parts/5o5-archive.php:15
+msgid "Search:"
+msgstr ""
+
+#: template-parts/5o5-archive.php:22
+#. translators: %s: Number of search results.
+msgid "We found %s result for your search."
+msgid_plural "We found %s results for your search."
+msgstr[0] ""
+msgstr[1] ""
+
+#: template-parts/5o5-archive.php:31
+msgid ""
+"We could not find any results for your search. You can give it another try "
+"through the search form below."
+msgstr ""
+
+#: template-parts/5o5-archive.php:75
+msgid "Number"
+msgstr ""
+
+#: template-parts/5o5-archive.php:76
+msgid "Hull"
+msgstr ""
+
+#: template-parts/5o5-archive.php:77
+msgid "Last known owner"
+msgstr ""
+
+#: template-parts/5o5-archive.php:118
+msgid "search again"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:24
+#. translators: 1: link to WP admin new post page.
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content.php:40
+#. translators: %s: Name of current post. Only visible to screen readers
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content.php:53
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/not-authorized.php:2
+msgid "Your account is not authorized to manage listing."
+msgstr ""
+
+#: template-parts/pagination.php:21
+msgid "Newer <span class=\"nav-short\">Posts</span>"
+msgstr ""
+
+#: template-parts/pagination.php:25
+msgid "Older <span class=\"nav-short\">Posts</span>"
+msgstr ""
+
+#: template-parts/site-footer.php:7
+msgid "International 5O5 Sailing"
+msgstr ""
+
+#: template-parts/site-footer.php:8
+msgid "Polish 5O5 Sailing"
+msgstr ""
+
+#: template-parts/site-header.php:27
+msgid "sailors, boats & results"
+msgstr ""
+
+#: template-parts/site-header.php:28
+msgid "through the ages"
+msgstr ""
+
+#: template-parts/site-header.php:33
+msgid "Primary Menu"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "5o5 Results Archive"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://iworks.pl/5o5-results-archive"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Waldemar Więckowski"
+msgstr ""
+
+#: inc/template-tags.php:30
+#. translators: %s: post date.
+msgctxt "post date"
+msgid "Offer expires on %s"
+msgstr ""
+
+#: inc/template-tags.php:60
+#. translators: %s: post date.
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:76
+#. translators: %s: post author.
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:100
+#. translators: used between list items, there is a space after the comma
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
