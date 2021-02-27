@@ -26,11 +26,13 @@ abstract class Int5o5_Archive {
 	 */
 	protected $debug = 'false';
 
+    protected $root = '';
 
 	protected function __construct() {
 		$child_version = wp_get_theme();
 		$this->version = $child_version->Version;
 		$this->url     = get_stylesheet_directory_uri();
+		$this->root     = get_stylesheet_directory();
 		$this->debug   = defined( 'WP_DEBUG' ) && WP_DEBUG;
 	}
 
