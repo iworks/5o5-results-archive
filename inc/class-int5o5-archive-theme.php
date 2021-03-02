@@ -190,6 +190,7 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 			),
 			'android' => array(
 				192,
+				512,
 			),
 		);
 		foreach ( $icons as $type => $sizes ) {
@@ -331,6 +332,17 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 					'sizes'   => '192x192',
 					'type'    => 'image/png',
 					'density' => '4.0',
+				),
+				array(
+					'src'   => esc_url( $this->get_asset_url( 'icons/favicon/android-icon-521x521.png' ) ),
+					'sizes' => '521x521',
+					'type'  => 'image/png',
+				),
+				array(
+					'src'     => esc_url( $this->get_asset_url( 'icons/favicon/maskable.png' ) ),
+					'sizes'   => '1024x1024',
+					'type'    => 'image/png',
+					'purpose' => 'any maskable',
 				),
 			),
 			'splash_pages'     => null,
