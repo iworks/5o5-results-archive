@@ -334,8 +334,8 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 					'density' => '4.0',
 				),
 				array(
-					'src'   => esc_url( $this->get_asset_url( 'icons/favicon/android-icon-521x521.png' ) ),
-					'sizes' => '521x521',
+					'src'   => esc_url( $this->get_asset_url( 'icons/favicon/android-icon-512x512.png' ) ),
+					'sizes' => '512x512',
 					'type'  => 'image/png',
 				),
 				array(
