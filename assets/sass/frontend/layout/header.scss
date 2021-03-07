@@ -15,16 +15,27 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            .site-branding {
+        }
+        .site-branding {
+            display: flex;
+            align-items: center;
+        }
+        .search {
+            @media screen and ( max-width: #{ $width_m } ) {
                 display: flex;
+                padding: 10px;
                 align-items: center;
+                form {
+                    display: inline-block;
+                    margin: 0 auto;
+                }
             }
-        }
-        .search-field {
-            @include field;
-        }
-        .search-submit {
-            @include button;
+            .search-field {
+                @include field;
+            }
+            .search-submit {
+                @include button;
+            }
         }
     }
     .site-branding {

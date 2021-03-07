@@ -426,8 +426,10 @@ $font_root: 'assets/fonts/';
 }
 
 @mixin main-padding-lr() {
-    padding-left: 10px;
-    padding-right: 10px;
+    @media screen and ( min-width: #{ $width_m + 1px } ) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 @mixin job_listing_pending() {

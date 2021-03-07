@@ -12,7 +12,7 @@ body {
             }
         }
         td, th {
-                padding: 2px 5px;
+            padding: 2px 5px;
         }
         td {
             &.place {
@@ -22,6 +22,41 @@ body {
                 width: 3em;
                 text-align: center;
             }
+        }
+        @media screen and ( max-width: #{ $width_m + 1px } ) {
+            @media screen and ( max-width: #{ $width_s + 1px } ) {
+                thead {
+                    display: none;
+                }
+                td {
+                    display: block;
+                }
+                tr+tr {
+                    td {
+                        &:first-child {
+                            border-top: 1px solid $color_primary;
+                        }
+                    }
+                }
+            }
+            th {
+                &.serie,
+                &.teams,
+                &.races {
+                    display: none;
+                }
+            }
+            td {
+                &.fleet-no-results,
+                &.series,
+                &.number-of-races,
+                &.number-of-competitors {
+                    display: none;
+                }
+            }
+        }
+        h2 {
+            text-align: center;
         }
     }
     table {
