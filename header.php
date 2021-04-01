@@ -14,6 +14,17 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="description" content="
+	<?php
+	if ( is_single() ) {
+		single_post_title( '', true );
+	} else {
+		bloginfo( 'name' );
+		echo ' - ';
+		echo str_replace( '&lt;br&gt;', ' ', get_bloginfo( 'description' ) );
+	}
+	?>
+	" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
@@ -23,4 +34,4 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', '5o5-results-archive' ); ?></a>
-<?php get_template_part( 'template-parts/site', 'header'); ?>
+<?php get_template_part( 'template-parts/site', 'header' ); ?>
