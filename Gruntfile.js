@@ -234,8 +234,7 @@ module.exports = function( grunt ) {
 		// CSS - Minify all .css files.
 		cssmin: {
 			options: {
-				banner:
-					'/*!\n' +
+				banner: '/*!\n' +
 					'Theme Name: <%= pkg.title %>\n' +
 					'Theme URI: <%= pkg.uri %>\n' +
 					'Author: <%= pkg.author %>\n' +
@@ -244,7 +243,6 @@ module.exports = function( grunt ) {
 					'Version: <%= pkg.version %>.<%= new Date().getTime() %>\n' +
 					'License: GNU General Public License v2 or later\n' +
 					'Text Domain: ' + conf.translation.textdomain + '\n' +
-					'\n' +
 					' */\n'
 			},
 			minify: {
