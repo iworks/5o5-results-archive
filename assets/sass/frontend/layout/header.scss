@@ -39,11 +39,14 @@
         }
     }
     .site-branding {
-        @media screen and ( max-width: $width_m ) {
+        @media screen and ( max-width $width_m ) {
             @include main-padding-lr;
             .site-description {
                 margin: 0;
             }
+        }
+        @media screen and ( max-width: #{ $width_m } ) {
+            padding: 0 20px;
         }
         .site-title {
             padding-right: 10px;
@@ -97,73 +100,28 @@
         &.toggled {
             @media screen and ( max-width: $width_m ) {
                 background-color: $color_gray_1;
-                margin-top: 10px;
-                padding: 10px;
+                padding: 10px 0;
                 .menu-toggle {
                     background: {
                         @include icon( 'menu/close.svg' );
                     }
                 }
                 #primary-menu {
-                    display: flex;
-                    flex-direction: column-reverse;
+                    display: block;
                     a {
-                        @include button_reverse;
-                        &.link-add {
-                            @include button;
-                            text-align: center;
-                        }
-                        display: block;
-                        margin: 10px auto;
-                        width: 200px;
-                        padding-left: 37px;
                     }
-                    .children {
+                    .primary-menu {
                         display: block;
-                        a {
-                            background-image: none;
-                            display: flex;
-                            &:before {
-                                content: "";
-                                display: block;
-                                width: 20px;
-                                height: 14px;
-                                background: {
-                                    repeat: no-repeat;
-                                    position: 0 center;
-                                    size: contain;
-                                }
-                            }
-                            &.link-profile {
-                                &:before {
-                                    background: {
-                                        @include icon( 'person.svg' );
-                                    }
-                                }
-                            }
-                            &.link-dashboard {
-                                &:before {
-                                    background: {
-                                        @include icon( 'suitcase.svg' );
-                                    }
-                                }
-                            }
+                        li {
+                            padding: 0;
+                            margin: 5px 0;
                         }
                     }
-                    .account {
-                        > {
-                            .link-profile {
-                                display: none;
-                            }
-                        }
-                        border: 0;
+                    a {
                         display: block;
-                        position: static;
-                        .children {
-                            @include reset;
-                            display: block;
-                            position: inherit;
-                        }
+                        background-image: none;
+                        padding: 5px 10px;
+                        text-align: center;
                     }
                 }
             }
@@ -181,34 +139,6 @@
             }
         }
         .button {
-            &.button-profile,
-            &.button-dashboard {
-                @include button_reverse;
-                padding-left: 37px;
-                background: {
-                    @include icon( 'person.svg' );
-                    repeat: no-repeat;
-                    position: 14px center;
-                    size: 14px auto;
-                }
-                &:hover,
-                &.current-page {
-                    background: {
-                        @include icon( 'person-white.svg' );
-                    }
-                }
-            }
-            &.button-dashboard {
-                background: {
-                    @include icon( 'suitcase.svg' );
-                }
-                &:hover,
-                &.current-page {
-                    background: {
-                        @include icon( 'suitcase-white.svg' );
-                    }
-                }
-            }
             &.current-page {
                 background-color: $color_accent;
                 color: $white;
@@ -216,21 +146,6 @@
         }
         .link {
             @include link;
-            &.link-profile,
-            &.link-dashboard {
-                padding-left: 37px;
-                background: {
-                    @include icon( 'person.svg' );
-                    repeat: no-repeat;
-                    position: 14px center;
-                    size: 14px auto;
-                }
-            }
-            &.link-dashboard {
-                background: {
-                    @include icon( 'suitcase.svg' );
-                }
-            }
         }
     }
 }

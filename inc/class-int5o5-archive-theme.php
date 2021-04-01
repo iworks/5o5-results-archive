@@ -89,7 +89,8 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 	 * @since 1.0.0
 	 */
 	public function enqueue() {
-		wp_enqueue_style( '5o5-results-archive-style', get_stylesheet_uri(), array(), $this->version );
+		wp_enqueue_style( '5o5-results-archive', get_stylesheet_uri(), array(), $this->version );
+		wp_enqueue_script( '5o5-results-archive' );
 	}
 
 	public function register_scripts() {
@@ -99,15 +100,10 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		wp_register_script(
 			'5o5-results-archive',
 			$this->url . sprintf( '/assets/scripts/frontend.%sjs', $this->debug ? '' : 'min.' ),
-			array( 'jquery', 'select2' ),
+			array(),
 			$this->version,
 			true
 		);
-		$data = array(
-			'ajaxurl' => admin_url( 'admin-ajax.php' ),
-		);
-		$data = apply_filters( 'wp_localize_script_int505_archive_theme', $data );
-		wp_localize_script( '5o5-results-archive', 'int505_archive_theme', $data );
 	}
 
 	/**
@@ -136,6 +132,10 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 	 * @since 1.4.0
 	 */
 	public function dequeue_styles() {
+		if ( is_admin() ) {
+			return;
+		}
+		wp_dequeue_style( 'wp-block-library' );
 	}
 
 	/**
@@ -230,7 +230,12 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 			'<meta name="msapplication-TileImage" content="%s" />',
 			$this->get_favicon_url( 'ms-icon-144x144' )
 		);
-		$meta_tags[] = '<link rel="manifest" href="/manifest.json" />';
+		/**
+		 * manifest.json
+		 */
+		if ( ! class_exists( 'iWorks_PWA' ) ) {
+			$meta_tags[] = '<link rel="manifest" href="/manifest.json" />';
+		}
 		return $meta_tags;
 	}
 

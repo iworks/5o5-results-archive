@@ -22,6 +22,9 @@ body {
                 width: 3em;
                 text-align: center;
             }
+            a {
+                display: block;
+            }
         }
         @media screen and ( max-width: #{ $width_m + 1px } ) {
             @media screen and ( max-width: #{ $width_s + 1px } ) {
