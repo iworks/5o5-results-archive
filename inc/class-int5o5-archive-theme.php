@@ -27,6 +27,7 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		add_action( 'parse_request', array( $this, 'browserconfig_xml' ) );
 		add_action( 'parse_request', array( $this, 'request_favicon' ) );
 		add_action( 'init', array( $this, 'register_scripts' ) );
+		add_action( 'save_post', array( $this, 'cache_clear' ) );
 		/**
 		 * manifest.json
 		 */
@@ -59,6 +60,11 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		add_filter( 'get_the_generator_rdf', '__return_empty_string' );
 		add_filter( 'get_the_generator_comment', '__return_empty_string' );
 		add_filter( 'get_the_generator_export', '__return_empty_string' );
+		/**
+		 * theme
+		 */
+		add_filter( 'int505_archive_last_update', array( $this, 'get_last_update_string' ) );
+		add_filter( 'int505_archive_last_results', array( $this, 'get_last_results_html' ) );
 	}
 
 	public function iworks_pwa_offline_urls_set( $set ) {
@@ -404,5 +410,50 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		return esc_url( $url );
 	}
 
+	public function cache_clear() {
+		foreach ( $this->cache_keys as $cache_key ) {
+			wp_cache_delete( $cache_key );
+		}
+	}
+
+	public function get_last_update_string( $content ) {
+		$content = wp_cache_get( $this->cache_keys[ __FUNCTION__ ] );
+		if ( ! empty( $content ) ) {
+			return $content;
+		}
+		global $wpdb;
+		$query = sprintf(
+			'select post_date from %s where post_status = %%s',
+			$wpdb->posts
+		);
+		$value = $wpdb->get_var( $wpdb->prepare( $query, 'publish' ) );
+		if ( empty( $value ) ) {
+			return esc_html__( 'unknown', '5o5-results-archive' );
+		}
+		$value = strtotime( $value );
+		$value = date_i18n( get_option( 'date_format' ), $value );
+
+		$content = sprintf(
+			esc_html__( 'Last update: %s', '5o5-results-archive' ),
+			$value
+		);
+		wp_cache_set( $this->cache_keys[ __FUNCTION__ ], $content );
+		return $content;
+	}
+
+	public function get_last_results_html( $content ) {
+		$content    = '<div class="last-results">';
+		$categories = array(
+			'world'       => 5,
+			'continental' => 5,
+			'national'    => 5,
+			'::last'      => 5,
+		);
+		foreach ( $categories as $slug => $counter ) {
+			$content .= apply_filters( 'iworks_fleet_result_serie_regatta_list', '', $slug, $counter );
+		}
+		$content .= '</div>';
+		return $content;
+	}
 }
 

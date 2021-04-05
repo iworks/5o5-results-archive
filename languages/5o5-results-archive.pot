@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: 5o5 Results Archive 0.0.2.1617258964485\n"
+"Project-Id-Version: 5o5 Results Archive 1.0.0.1617618099698\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/5o5-results-archive\n"
-"POT-Creation-Date: 2021-04-01 06:36:04+00:00\n"
+"POT-Creation-Date: 2021-04-05 10:21:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,12 +44,24 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
+#: front-page.php:19
+msgid "Results"
+msgstr ""
+
 #: functions.php:56
 msgid "Primary"
 msgstr ""
 
-#: header.php:25
+#: header.php:36
 msgid "Skip to content"
+msgstr ""
+
+#: inc/class-int5o5-archive-theme.php:431
+msgid "unknown"
+msgstr ""
+
+#: inc/class-int5o5-archive-theme.php:437
+msgid "Last update: %s"
 msgstr ""
 
 #: inc/template-tags.php:18
@@ -164,11 +176,11 @@ msgstr ""
 msgid "Older <span class=\"nav-short\">Posts</span>"
 msgstr ""
 
-#: template-parts/site-footer.php:7
+#: template-parts/site-footer.php:5
 msgid "International 5O5 Sailing"
 msgstr ""
 
-#: template-parts/site-footer.php:8
+#: template-parts/site-footer.php:6
 msgid "Polish 5O5 Sailing"
 msgstr ""
 

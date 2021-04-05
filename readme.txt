@@ -5,7 +5,7 @@ Tags:
 
 Requires at least: 4.5
 Tested up to: 5.4
-Requires PHP: 5.6
+Requires PHP: 7.2
 Stable tag: THEME_VERSION
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -30,7 +30,7 @@ Description
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0.0 - 2021-01-01 =
 * Initial release
 
 == Credits ==
