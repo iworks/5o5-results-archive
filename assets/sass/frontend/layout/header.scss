@@ -49,22 +49,11 @@
             padding: 0 20px;
         }
         .site-title {
-            padding-right: 10px;
-            a {
-                text-indent: -999em;
-                overflow: hidden;
-                display: block;
-                width: 50px;
-                height: 35px;
-                background: {
-                    @include image( 'logo.svg' );
-                    repeat: no-repeat;
-                    position: center 0;
-                    size: contain;
-                }
-            }
+            display: none;
         }
         .site-description {
+            display: flex;
+            align-items: center;
             color: $color_01;
             @media screen and ( min-width: #{ $width_m + 1px } ) {
                 max-width: 210px;
@@ -73,6 +62,19 @@
             @include font( 12, 14 );
             strong, span {
                 display: block;
+            }
+            &:before {
+                display: block;
+                content: "";
+                width: 51px;
+                height: 35px;
+                margin-right: 10px;
+                background: {
+                    @include image( 'logo.svg' );
+                    repeat: no-repeat;
+                    position: center;
+                    size: contain;
+                }
             }
         }
     }

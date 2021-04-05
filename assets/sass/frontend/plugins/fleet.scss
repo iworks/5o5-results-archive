@@ -5,6 +5,17 @@
     padding: 2px 5px;
 }
 
+@mixin default_width_results() {
+    @include default_width;
+    @media screen and ( max-width: #{ $width_m + 1px } ) {
+        margin: {
+            left: 10px;
+            right: 10px;
+        }
+    }
+}
+
+
 body {
     .fleet-results {
         width: 100%;
@@ -95,8 +106,12 @@ body {
         }
     }
     .last-results {
+        @include default_width_results;
         display: grid;
         grid-template-columns: repeat( 2, 50% );
+        @media screen and ( max-width: #{ $width_m + 1px } ) {
+            display: block;
+        }
         ul {
             @include reset;
             a {
@@ -109,10 +124,17 @@ body {
         }
     }
     .results-years-list {
+        @include default_width_results;
         ul {
             @include reset;
             display: grid;
             grid-template-columns: repeat( 8, 12% );
+            @media screen and ( max-width: #{ $width_m + 1px } ) {
+                grid-template-columns: repeat( 4, 25% );
+            }
+            @media screen and ( max-width: #{ $width_s + 1px } ) {
+                grid-template-columns: repeat( 2, 50% );
+            }
             a {
                 font-size: 1.3em;
                 display: flex;
