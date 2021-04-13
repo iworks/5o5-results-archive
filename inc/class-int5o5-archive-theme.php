@@ -11,8 +11,8 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 	 *
 	 * @since 1.0.0
 	 */
-	private $color_title      = '#2d2683';
-	private $color_theme      = '#000000';
+	private $color_title      = '#003049';
+	private $color_theme      = '#003049';
 	private $color_background = '#f0f0ff';
 	private $short_name       = '5o5 Archive';
 
@@ -28,6 +28,7 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		add_action( 'parse_request', array( $this, 'request_favicon' ) );
 		add_action( 'init', array( $this, 'register_scripts' ) );
 		add_action( 'save_post', array( $this, 'cache_clear' ) );
+		add_filter( 'document_title_parts', array( $this, 'document_title_parts' ) );
 		/**
 		 * manifest.json
 		 */
@@ -276,7 +277,7 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 			return;
 		}
 		header( 'Content-type: text/xml' );
-		echo '<?xml version="1.0" encoding="utf-8"?>';
+		echo '<' . '?xml version="1.0" encoding="utf-8"?' . '>';
 		echo PHP_EOL;
 		echo '<browserconfig>';
 		echo '<msapplication>';
@@ -444,16 +445,39 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 	public function get_last_results_html( $content ) {
 		$content    = '<div class="last-results">';
 		$categories = array(
-			'world'       => 5,
-			'continental' => 5,
-			'national'    => 5,
-			'::last'      => 5,
+			'world'       => array(
+				'posts_per_page' => 10,
+				'show_more'      => true,
+				'group_by_year'  => false,
+			),
+			'continental' => array(
+				'posts_per_page' => 5,
+				'show_more'      => true,
+			),
+			'national'    => array(
+				'posts_per_page' => 5,
+				'show_more'      => true,
+				'show_flag'      => true,
+				'show_english'   => true,
+			),
+			'::last'      => array(
+				'posts_per_page' => 12,
+				'group_by_year'  => false,
+			),
 		);
-		foreach ( $categories as $slug => $counter ) {
-			$content .= apply_filters( 'iworks_fleet_result_serie_regatta_list', '', $slug, $counter );
+		foreach ( $categories as $slug => $options ) {
+			$content .= apply_filters( 'iworks_fleet_result_serie_regatta_list', '', $slug, $options );
 		}
 		$content .= '</div>';
 		return $content;
+	}
+
+	public function document_title_parts( $title ) {
+		$new = array();
+		foreach ( $title as $part ) {
+			$new[] = str_replace( '&lt;br&gt;', ' ', $part );
+		}
+		return $new;
 	}
 }
 
