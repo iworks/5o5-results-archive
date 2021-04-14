@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: 5o5 Results Archive 1.0.0.1617630073135\n"
+"Project-Id-Version: 5o5 Results Archive 1.0.0.1618383571606\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/5o5-results-archive\n"
-"POT-Creation-Date: 2021-04-05 13:41:13+00:00\n"
+"POT-Creation-Date: 2021-04-14 06:59:31+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -56,11 +56,11 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/class-int5o5-archive-theme.php:431
+#: inc/class-int5o5-archive-theme.php:432
 msgid "unknown"
 msgstr ""
 
-#: inc/class-int5o5-archive-theme.php:437
+#: inc/class-int5o5-archive-theme.php:438
 msgid "Last update: %s"
 msgstr ""
 

@@ -21,6 +21,7 @@ get_header();
 	<div class="entry-content">
 <?php echo apply_filters( 'int505_archive_last_results', '' ); ?>
 <?php echo do_shortcode( '[fleet_regattas_list_years]' ); ?>
+<?php echo do_shortcode( '[fleet_regattas_list_countries]' ); ?>
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">
 	</footer><!-- .entry-footer -->

@@ -108,7 +108,10 @@ body {
     .last-results {
         @include default_width_results;
         display: grid;
-        grid-template-columns: repeat( 2, 50% );
+        grid-template-columns: repeat( 4, 23% );
+        @media screen and ( max-width: #{ $width_x + 1px } ) {
+            grid-template-columns: repeat( 2, 50% );
+        }
         @media screen and ( max-width: #{ $width_m + 1px } ) {
             display: block;
         }
@@ -123,7 +126,9 @@ body {
             padding-bottom: 2em;
         }
     }
-    .results-years-list {
+    .results-years-list,
+    .results-countries-list
+    {
         @include default_width_results;
         ul {
             @include reset;
@@ -140,6 +145,7 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                text-align: center;
                 &:after {
                     content: "";
                     display: block;
