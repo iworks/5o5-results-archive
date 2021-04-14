@@ -424,7 +424,7 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		}
 		global $wpdb;
 		$query = sprintf(
-			'select post_date from %s where post_status = %%s',
+			'select post_date from %s where post_status = %%s order by 1 desc limit 1',
 			$wpdb->posts
 		);
 		$value = $wpdb->get_var( $wpdb->prepare( $query, 'publish' ) );
