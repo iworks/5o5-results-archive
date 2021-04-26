@@ -5,7 +5,7 @@
     background-color: $color_01;
     padding: 11px;
     @media screen and (max-width: $width_m) {
-          padding: 0;
+        padding: 0;
     }
     .site-info {
         @include default_width;
@@ -13,17 +13,22 @@
         justify-content: space-between;
         @include font( 12, 30 );
         @media screen and (max-width: $width_m) {
-          flex-direction: column;
+            flex-direction: column;
         }
         > {
             div {
                 display: flex;
                 align-items: center;
                 @media screen and (max-width: $width_m) {
-                  justify-content: center;
-                }@include main-padding-lr;
+                    justify-content: center;
+                }
+                @include main-padding-lr;
                 &.site-info-right {
                     justify-content: flex-end;
+                    @media screen and (max-width: $width_m) {
+                        padding: 10px;
+                        justify-content: center;
+                    }
                 }
             }
         }
