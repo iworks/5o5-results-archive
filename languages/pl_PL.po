@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: OPI Jobs 0.0.1.1599813946548\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/5o5-results-"
 "archive\n"
-"POT-Creation-Date: 2021-04-14 06:59:31+00:00\n"
+"POT-Creation-Date: 2021-05-03 12:04:53+00:00\n"
 "PO-Revision-Date: 2020-11-19 13:31+0100\n"
 "Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
 "Language-Team: \n"
@@ -102,13 +102,67 @@ msgstr "Poprzedni:"
 msgid "Next:"
 msgstr "Następny:"
 
-#: template-parts/5o5-archive.php:15
+#: template-parts/5o5-archive/table-header-iworks_fleet_boat.php:4
+msgid "Number"
+msgstr ""
+
+#: template-parts/5o5-archive/table-header-iworks_fleet_boat.php:5
+msgid "Hull"
+msgstr ""
+
+#: template-parts/5o5-archive/table-header-iworks_fleet_boat.php:6
+msgid "Last known owner"
+msgstr ""
+
+#: template-parts/5o5-archive/table-header-iworks_fleet_location.php:4
+#: template-parts/5o5-archive/table-header-iworks_fleet_result.php:4
+msgid "Event"
+msgstr ""
+
+#: template-parts/5o5-archive/table-header-iworks_fleet_location.php:5
+#: template-parts/5o5-archive/table-header-iworks_fleet_result.php:5
+msgid "Year"
+msgstr ""
+
+#: template-parts/5o5-archive/table-header-iworks_fleet_location.php:6
+#: template-parts/5o5-archive/table-header-iworks_fleet_result.php:6
+msgid "Start"
+msgstr ""
+
+#: template-parts/5o5-archive/table-header-iworks_fleet_location.php:7
+#: template-parts/5o5-archive/table-header-iworks_fleet_result.php:7
+msgid "End"
+msgstr ""
+
+#: template-parts/5o5-archive/table-header-iworks_fleet_location.php:8
+#: template-parts/5o5-archive/table-header-iworks_fleet_result.php:8
+msgid "Races"
+msgstr ""
+
+#: template-parts/5o5-archive/table-header-iworks_fleet_location.php:9
+#: template-parts/5o5-archive/table-header-iworks_fleet_result.php:9
+msgid "Teams"
+msgstr ""
+
+#: template-parts/5o5-archive/table-header-iworks_fleet_person.php:4
+msgid "Name"
+msgstr ""
+
+#: template-parts/5o5-archive/table-header-iworks_fleet_person.php:5
+msgid "Boats"
+msgstr ""
+
+#: template-parts/5o5-archive/table-header-iworks_fleet_person.php:6
+msgid "Last known start"
+msgstr ""
+
+#: template-parts/5o5-archive.php:30
 #, fuzzy
 msgid "Search:"
 msgstr "Szukaj"
 
 #. translators: %s: Number of search results.
-#: template-parts/5o5-archive.php:22
+#: template-parts/5o5-archive.php:37
 #, fuzzy
 msgid "We found %s result for your search."
 msgid_plural "We found %s results for your search."
@@ -116,25 +170,13 @@ msgstr[0] "Doprecyzuj wyszukiwanie"
 msgstr[1] "Doprecyzuj wyszukiwanie"
 msgstr[2] "Doprecyzuj wyszukiwanie"
 
-#: template-parts/5o5-archive.php:31
+#: template-parts/5o5-archive.php:46
 msgid ""
 "We could not find any results for your search. You can give it another try "
 "through the search form below."
 msgstr ""
 
-#: template-parts/5o5-archive.php:75
-msgid "Number"
-msgstr ""
-
-#: template-parts/5o5-archive.php:76
-msgid "Hull"
-msgstr ""
-
-#: template-parts/5o5-archive.php:77
-msgid "Last known owner"
-msgstr ""
-
-#: template-parts/5o5-archive.php:118
+#: template-parts/5o5-archive.php:100
 msgid "search again"
 msgstr ""
 
