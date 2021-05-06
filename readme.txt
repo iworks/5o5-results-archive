@@ -28,6 +28,9 @@ Description
 
 * Fixed front page years and countries lists.
 
+= 1.0.2 - 2021-xx-xx =
+
+
 = 1.0.1 - 2021-05-06 =
 * Speed optimization.
 * Improved results display.
