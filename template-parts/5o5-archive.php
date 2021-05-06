@@ -1,7 +1,4 @@
-<?php get_header(); ?>
-
 <main id="primary" class="site-main">
-
 <?php
 
 $type = '';
@@ -73,6 +70,11 @@ if ( $archive_title || $archive_subtitle ) {
 }
 
 if ( have_posts() ) {
+
+	if ( is_post_type_archive( 'iworks_fleet_result' ) ) {
+		echo do_shortcode( '[fleet_regattas_list_countries title="0" flags="1"]' );
+	}
+
 	?>
 <article>
 	<div class="post-inner thin ">
@@ -113,6 +115,3 @@ if ( have_posts() ) {
 </main><!-- #site-content -->
 
 <?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
-
-<?php
-get_footer();
