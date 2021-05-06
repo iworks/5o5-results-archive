@@ -24,13 +24,13 @@ Description
 
 == Frequently Asked Questions ==
 
-= Does this theme support any plugins? =
-
-5o5-results-archive includes support for WooCommerce and for Infinite Scroll in Jetpack.
-
 == Changelog ==
 
 * Fixed front page years and countries lists.
+
+= 1.0.1 - 2021-05-06 =
+* Speed optimization.
+* Improved results display.
 
 = 1.0.0 - 2021-01-01 =
 * Initial release

@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: 5o5 Results Archive 1.0.0.1620043493308\n"
+"Project-Id-Version: 5o5 Results Archive 1.0.1.1620304300744\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/5o5-results-archive\n"
-"POT-Creation-Date: 2021-05-03 12:04:53+00:00\n"
+"POT-Creation-Date: 2021-05-06 12:31:40+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -102,6 +102,7 @@ msgid "Next:"
 msgstr ""
 
 #: template-parts/5o5-archive/table-header-iworks_fleet_boat.php:4
+#: template-parts/5o5-archive/table-header-iworks_fleet_boat_manufacturer.php:4
 msgid "Number"
 msgstr ""
 
@@ -110,7 +111,12 @@ msgid "Hull"
 msgstr ""
 
 #: template-parts/5o5-archive/table-header-iworks_fleet_boat.php:6
+#: template-parts/5o5-archive/table-header-iworks_fleet_boat_manufacturer.php:6
 msgid "Last known owner"
+msgstr ""
+
+#: template-parts/5o5-archive/table-header-iworks_fleet_boat_manufacturer.php:5
+msgid "Build year"
 msgstr ""
 
 #: template-parts/5o5-archive/table-header-iworks_fleet_location.php:4
@@ -155,24 +161,24 @@ msgstr ""
 msgid "Last known start"
 msgstr ""
 
-#: template-parts/5o5-archive.php:30
+#: template-parts/5o5-archive.php:27
 msgid "Search:"
 msgstr ""
 
-#: template-parts/5o5-archive.php:37
+#: template-parts/5o5-archive.php:34
 #. translators: %s: Number of search results.
 msgid "We found %s result for your search."
 msgid_plural "We found %s results for your search."
 msgstr[0] ""
 msgstr[1] ""
 
-#: template-parts/5o5-archive.php:46
+#: template-parts/5o5-archive.php:43
 msgid ""
 "We could not find any results for your search. You can give it another try "
 "through the search form below."
 msgstr ""
 
-#: template-parts/5o5-archive.php:100
+#: template-parts/5o5-archive.php:102
 msgid "search again"
 msgstr ""
 
