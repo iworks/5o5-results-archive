@@ -6,7 +6,8 @@ $au: 1.618;
 
 $width: 100%;
 
-$width_s: 320px;
+$width_xs: 320px;
+$width_s: 425px;
 $width_m: 768px;
 $width_l: 1024px;
 $width_x: 1180px;
@@ -70,7 +71,7 @@ $image_root: 'assets/images/';
 @mixin short_width() {
     @include default_width;
     max-width: 880px;
-    @media screen and ( max-width: #{ $width_s + 1px } ) {
+    @media screen and ( max-width: #{ $width_xs + 1px } ) {
         max-width: 300px;
     }
 }
@@ -367,64 +368,6 @@ $font_root: 'assets/fonts/';
     }
 }
 
-@mixin job_header() {
-    .entry-header {
-        position: relative;
-        h1,
-        .job-institution {
-            margin-bottom: 57px;
-            @media print {
-                margin-bottom: 10px;
-            }
-            @media screen and ( max-width: $width_m ) {
-              margin-bottom: 29px;
-            }
-        }
-        h1 {
-            @include font_metropolis_light;
-            @include font( 30, 40 );
-            @media screen and ( max-width: $width_m ) {
-              @include font( 20, 24 );
-            }
-        }
-        .job-institution {
-            color: $color_01;
-            @include font( 18, 28 );
-            @media screen and ( max-width: $width_m ) {
-              text-align: center;
-              margin-bottom: 15px;
-              @include font( 14, 28 );
-            }
-            .job-institution-name {
-                @include font_metropolis_light;
-            }
-            .job-institution-division {
-                @include font_metropolis_medium;
-            }
-        }
-        .job-company-logo {
-            @media screen and ( min-width: #{ $width_m + 1px } ) {
-                position: absolute;
-                top: 2em;
-                right: 20px;
-                width: 200px;
-                background: {
-                    position: 100% 0;
-                }
-            }
-            height: 120px;
-            background: {
-                repeat: no-repeat;
-                size: contain;
-                position: 50%;
-            }
-            @media print {
-                display: none;
-            }
-        }
-    }
-}
-
 @mixin main-padding-lr() {
     @media screen and ( min-width: #{ $width_m + 1px } ) {
         padding-left: 10px;
@@ -432,13 +375,3 @@ $font_root: 'assets/fonts/';
     }
 }
 
-@mixin job_listing_pending() {
-    @include short_width;
-    padding: 10px 20px;
-    border: 2px dashed $color_01;
-    @include radius( 10px );
-    @include job_header;
-    h1 {
-        margin-top: 0;
-    }
-}

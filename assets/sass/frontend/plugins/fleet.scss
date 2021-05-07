@@ -70,9 +70,12 @@ body {
                     display: inline;
                 }
             }
+            &.date {
+                white-space: nowrap;
+            }
         }
         @media screen and ( max-width: #{ $width_m + 1px } ) {
-            @media screen and ( max-width: #{ $width_s + 1px } ) {
+            @media screen and ( max-width: #{ $width_xs + 1px } ) {
                 thead {
                     display: none;
                 }
@@ -114,10 +117,10 @@ body {
         @include default_width_results;
         display: grid;
         grid-template-columns: repeat( 4, 23% );
-        @media screen and ( max-width: #{ $width_x + 1px } ) {
+        @media screen and ( max-width: #{ $width_m + 1px } ) {
             grid-template-columns: repeat( 2, 50% );
         }
-        @media screen and ( max-width: #{ $width_m + 1px } ) {
+        @media screen and ( max-width: #{ $width_s + 1px } ) {
             display: block;
         }
         ul {
@@ -132,8 +135,7 @@ body {
         }
     }
     .results-years-list,
-    .results-countries-list
-    {
+    .results-countries-list {
         @include default_width_results;
         ul {
             @include reset;
@@ -147,13 +149,18 @@ body {
             @media screen and ( max-width: #{ $width_m + 1px } ) {
                 grid-template-columns: repeat( 2, 50% );
             }
-            @media screen and ( max-width: #{ $width_s + 1px } ) {
+            @media screen and ( max-width: #{ $width_xs + 1px } ) {
             }
             a {
                 align-items: center;
                 display: flex;
                 font-size: 1.3em;
-                line-height: 2em;
+                @media screen and ( min-width: #{ $width_m } ) {
+                    line-height: 1.7em;
+                }
+                @media screen and ( min-width: #{ $width_l } ) {
+                    line-height: 2em;
+                }
                 @media screen and ( min-width: #{ $width_m } ) {
                     justify-content: center;
                     text-align: center;
@@ -176,6 +183,17 @@ body {
             }
         }
     }
+    .results-countries-list {
+        ul {
+            display: grid;
+            @media screen and ( max-width: #{ $width_m + 1px } ) {
+                grid-template-columns: repeat( 3, 33% );
+            }
+            @media screen and ( max-width: #{ $width_s + 1px } ) {
+                grid-template-columns: repeat( 2, 50% );
+            }
+        }
+    }
     .results-years-list {
         ul {
             display: grid;
@@ -186,7 +204,7 @@ body {
             @media screen and ( max-width: #{ $width_m + 1px } ) {
                 grid-template-columns: repeat( 4, 25% );
             }
-            @media screen and ( max-width: #{ $width_s + 1px } ) {
+            @media screen and ( max-width: #{ $width_xs + 1px } ) {
                 grid-template-columns: repeat( 3, 33% );
             }
         }
@@ -207,5 +225,16 @@ body {
     .flag {
         padding-left: 1.8em;
     }
+}
+.boat-colors {
+    svg {
+        @media screen and ( max-width: #{ $width_s + 1px } ) {
+            max-width: 200px;
+        }
+        @media screen and ( max-width: #{ $width_xs + 1px } ) {
+            max-width: 150px;
+        }
+    }
+
 }
 

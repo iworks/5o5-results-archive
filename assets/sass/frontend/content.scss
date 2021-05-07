@@ -48,6 +48,11 @@ body {
             @include title;
         }
     }
+    .archive-header {
+        .archive-title {
+            @include title;
+        }
+    }
     main {
         article {
             header {
@@ -55,8 +60,23 @@ body {
                     @include title;
                 }
             }
+            h2, h3, h4, h5, h6 {
+                @include font_metropolis_light;
+                @media screen and ( max-width: $width_m ) {
+                    text-align: center;
+                    padding: 0 1em;
+                }
+            }
+            @media screen and ( max-width: $width_m ) {
+                h2 {
+                    @include font( 17, 20 );
+                }
+            }
         }
         .navigation {
+            @media screen and ( max-width: $width_m ) {
+                padding: 0 1em;
+            }
             &.pagination {
                 max-width: 400px;
                 margin: 0 auto;

@@ -10,7 +10,7 @@ body {
 #primary,
 #secondary {
     @include default_width;
-    min-width: $width_s;
+    min-width: $width_xs;
 }
 
 .site-main {
