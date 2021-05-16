@@ -29,7 +29,7 @@ Description
 * Fixed front page years and countries lists.
 
 = 1.0.2 - 2021-xx-xx =
-
+* Improved boat list on sailor page.
 
 = 1.0.1 - 2021-05-06 =
 * Speed optimization.

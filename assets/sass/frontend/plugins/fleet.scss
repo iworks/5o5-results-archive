@@ -237,4 +237,12 @@ body {
     }
 
 }
+.iworks-fleet-owner-boats-list {
+    @include reset_list;
+    display: flex;
+    flex-wrap: wrap;
+    a {
+        padding: .5em;
+    }
+}
 

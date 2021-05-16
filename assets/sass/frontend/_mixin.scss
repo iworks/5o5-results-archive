@@ -132,9 +132,24 @@ $image_root: 'assets/images/';
     -moz-columns: $columns;
     columns: $columns;
 }
-@mixin reset() {
-    background: transparent none;
+@mixin reset_out() {
     border: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    @include boxshadow( none );
+    @include radius( 0 );
+}
+@mixin reset_list() {
+    list-style: none;
+    @include reset_out;
+    li {
+        @include reset_out;
+    }
+}
+@mixin reset() {
+    @include reset_out;
+    background: transparent none;
     bottom: auto;
     color: inherit;
     display: inline;
@@ -147,14 +162,9 @@ $image_root: 'assets/images/';
     left: auto;
     line-height: $au;
     list-style: none;
-    margin: 0;
-    outline: 0;
-    padding: 0;
     position: static;
     right: auto;
     top: auto;
-    @include boxshadow( none );
-    @include radius( 0 );
     width: unset;
     height: unset;
     text-indent: unset;
