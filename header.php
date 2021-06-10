@@ -14,17 +14,6 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="description" content="
-	<?php
-	if ( is_single() ) {
-		single_post_title( '', true );
-	} else {
-		bloginfo( 'name' );
-		echo ' - ';
-		echo str_replace( '&lt;br&gt;', ' ', get_bloginfo( 'description' ) );
-	}
-	?>
-	" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
