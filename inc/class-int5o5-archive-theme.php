@@ -29,6 +29,7 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		add_action( 'init', array( $this, 'register_scripts' ) );
 		add_action( 'save_post', array( $this, 'cache_clear' ) );
 		add_filter( 'document_title_parts', array( $this, 'document_title_parts' ) );
+		add_action( 'after_setup_theme', array( $this, 'register_nav_menus' ) );
 		/**
 		 * manifest.json
 		 */
@@ -478,6 +479,20 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 			$new[] = str_replace( '&lt;br&gt;', ' ', $part );
 		}
 		return $new;
+	}
+
+	// This theme uses wp_nav_menu() in one location.
+	public function register_nav_menus() {
+		register_nav_menus(
+			array(
+				'primary' => esc_html__( 'Primary', '5o5-results-archive' ),
+			)
+		);
+		register_nav_menus(
+			array(
+				'footer' => esc_html__( 'Footer', '5o5-results-archive' ),
+			)
+		);
 	}
 }
 

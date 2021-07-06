@@ -151,35 +151,31 @@ body {
             }
             @media screen and ( max-width: #{ $width_xs + 1px } ) {
             }
-            a {
-                align-items: center;
-                display: flex;
-                font-size: 1.3em;
+        }
+        a {
+            align-items: center;
+            display: flex;
+            font-size: 1.3em;
+            padding: .5em;
+            width: 100%;
+            @media screen and ( min-width: #{ $width_m } ) {
+                justify-content: center;
+                text-align: center;
+            }
+            &:after {
                 @media screen and ( min-width: #{ $width_m } ) {
-                    line-height: 1.7em;
+                    content: "";
+                    display: block;
+                    padding-bottom: 30%;
                 }
                 @media screen and ( min-width: #{ $width_l } ) {
-                    line-height: 2em;
+                    content: "";
+                    display: block;
+                    padding-bottom: 20%;
                 }
-                @media screen and ( min-width: #{ $width_m } ) {
-                    justify-content: center;
-                    text-align: center;
-                }
-                &:after {
-                    @media screen and ( min-width: #{ $width_m } ) {
-                        content: "";
-                        display: block;
-                        padding-bottom: 30%;
-                    }
-                    @media screen and ( min-width: #{ $width_l } ) {
-                        content: "";
-                        display: block;
-                        padding-bottom: 20%;
-                    }
-                }
-                &:hover {
-                    background-color: $color_primary;
-                }
+            }
+            &:hover {
+                background-color: $color_primary;
             }
         }
     }
@@ -207,6 +203,8 @@ body {
             @media screen and ( max-width: #{ $width_xs + 1px } ) {
                 grid-template-columns: repeat( 3, 33% );
             }
+        }
+        a {
         }
     }
     table {
@@ -243,6 +241,15 @@ body {
     flex-wrap: wrap;
     a {
         padding: .5em;
+    }
+}
+.type-iworks_fleet_result {
+    .entry-content {
+        background: {
+            repeat: no-repeat;
+            position: 100% 0;
+            size: 200px auto;
+        }
     }
 }
 

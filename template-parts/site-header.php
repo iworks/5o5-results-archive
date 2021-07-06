@@ -37,20 +37,18 @@ if ( is_front_page() ) {
 			<nav id="site-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '5o5-results-archive' ); ?></button>
 				<div id="primary-menu">
-<?php if ( has_nav_menu( 'primary' ) ) { ?>
-					<ul class="primary-menu reset-list-style">
-	<?php
-									wp_nav_menu(
-										array(
-											'container'  => '',
-											'items_wrap' => '%3$s',
-											'theme_location' => 'primary',
-											'depth'      => 1,
-										)
-									);
+<?php
+if ( has_nav_menu( 'primary' ) ) {
+	wp_nav_menu(
+		array(
+			'container'      => false,
+			'menu_class'     => 'primary-menu',
+			'theme_location' => 'primary',
+			'depth'          => 1,
+		)
+	);
 }
 ?>
-					</ul>
 				</div>
 			</nav>
 		</div>

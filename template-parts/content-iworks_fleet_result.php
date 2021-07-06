@@ -28,7 +28,17 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-	<div class="entry-content">
+<?php
+				$style = array();
+
+if ( has_post_thumbnail() ) {
+	$style[] = sprintf(
+		'background-image:url(%s);',
+		get_the_post_thumbnail_url( get_the_ID(), array( 200, 0 ) )
+	);
+}
+?>
+	<div class="entry-content" style="<?php echo esc_attr( implode( '', $style ) ); ?>">
 		<?php
 		the_content(
 			sprintf(

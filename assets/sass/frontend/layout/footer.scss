@@ -32,8 +32,9 @@
                 }
             }
         }
+    }
+    .site-info-right {
         a {
-            color: $white;
             display: inline-block;
             width: 60px;
             height: 30px;
@@ -58,6 +59,25 @@
                 }
             }
         }
-
     }
+    .site-info-left {
+        color: darken( $white, 20% );
+        a {
+            color: $white;
+        }
+        @include reset_list;
+        display: flex;
+        li {
+            padding-right: 10px;
+            + {
+                li {
+                    &:before {
+                        content: "|";
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
 }
