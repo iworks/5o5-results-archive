@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: 5o5 Results Archive 1.0.1.1620304300744\n"
+"Project-Id-Version: 5o5 Results Archive 1.0.2.1625595398005\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/5o5-results-archive\n"
-"POT-Creation-Date: 2021-05-06 12:31:40+00:00\n"
+"POT-Creation-Date: 2021-07-06 18:16:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,20 +48,24 @@ msgstr ""
 msgid "Results"
 msgstr ""
 
-#: functions.php:56
-msgid "Primary"
-msgstr ""
-
-#: header.php:36
+#: header.php:25
 msgid "Skip to content"
 msgstr ""
 
-#: inc/class-int5o5-archive-theme.php:432
+#: inc/class-int5o5-archive-theme.php:433
 msgid "unknown"
 msgstr ""
 
-#: inc/class-int5o5-archive-theme.php:438
+#: inc/class-int5o5-archive-theme.php:439
 msgid "Last update: %s"
+msgstr ""
+
+#: inc/class-int5o5-archive-theme.php:488
+msgid "Primary"
+msgstr ""
+
+#: inc/class-int5o5-archive-theme.php:493
+msgid "Footer"
 msgstr ""
 
 #: inc/template-tags.php:18
@@ -182,6 +186,17 @@ msgstr ""
 msgid "search again"
 msgstr ""
 
+#: template-parts/content-iworks_fleet_result.php:47
+#: template-parts/content.php:37
+#. translators: %s: Name of current post. Only visible to screen readers
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content-iworks_fleet_result.php:60
+#: template-parts/content.php:50
+msgid "Pages:"
+msgstr ""
+
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr ""
@@ -203,15 +218,6 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content.php:40
-#. translators: %s: Name of current post. Only visible to screen readers
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
-
-#: template-parts/content.php:53
-msgid "Pages:"
-msgstr ""
-
 #: template-parts/not-authorized.php:2
 msgid "Your account is not authorized to manage listing."
 msgstr ""
@@ -224,11 +230,11 @@ msgstr ""
 msgid "Older <span class=\"nav-short\">Posts</span>"
 msgstr ""
 
-#: template-parts/site-footer.php:5
+#: template-parts/site-footer.php:19
 msgid "International 5O5 Sailing"
 msgstr ""
 
-#: template-parts/site-footer.php:6
+#: template-parts/site-footer.php:20
 msgid "Polish 5O5 Sailing"
 msgstr ""
 

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: OPI Jobs 0.0.1.1599813946548\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/5o5-results-"
 "archive\n"
-"POT-Creation-Date: 2021-05-06 12:31:40+00:00\n"
+"POT-Creation-Date: 2021-07-06 18:16:38+00:00\n"
 "PO-Revision-Date: 2020-11-19 13:31+0100\n"
 "Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
 "Language-Team: \n"
@@ -49,20 +49,24 @@ msgstr "Proszę spróbować w archiwum miesięcznym. %1$s"
 msgid "Results"
 msgstr ""
 
-#: functions.php:56
-msgid "Primary"
-msgstr "Główny"
-
-#: header.php:36
+#: header.php:25
 msgid "Skip to content"
 msgstr "Przejdź do treści"
 
-#: inc/class-int5o5-archive-theme.php:432
+#: inc/class-int5o5-archive-theme.php:433
 msgid "unknown"
 msgstr ""
 
-#: inc/class-int5o5-archive-theme.php:438
+#: inc/class-int5o5-archive-theme.php:439
 msgid "Last update: %s"
+msgstr ""
+
+#: inc/class-int5o5-archive-theme.php:488
+msgid "Primary"
+msgstr "Główny"
+
+#: inc/class-int5o5-archive-theme.php:493
+msgid "Footer"
 msgstr ""
 
 #: inc/template-tags.php:18
@@ -186,6 +190,17 @@ msgstr ""
 msgid "search again"
 msgstr ""
 
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content-iworks_fleet_result.php:47
+#: template-parts/content.php:37
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Czytaj dalej<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: template-parts/content-iworks_fleet_result.php:60
+#: template-parts/content.php:50
+msgid "Pages:"
+msgstr "Strony:"
+
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr "Niczego nie znaleziono"
@@ -212,15 +227,6 @@ msgid ""
 msgstr ""
 "Wygląda na to, że szukana strona nie istnieje. Być może warto jej poszukać."
 
-#. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:40
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "Czytaj dalej<span class=\"screen-reader-text\"> \"%s\"</span>"
-
-#: template-parts/content.php:53
-msgid "Pages:"
-msgstr "Strony:"
-
 #: template-parts/not-authorized.php:2
 msgid "Your account is not authorized to manage listing."
 msgstr "Twoje konto nie pozwala na zarządzanie ogłoszeniami."
@@ -235,11 +241,11 @@ msgstr "Edytuj <span class=\"screen-reader-text\">%s</span>"
 msgid "Older <span class=\"nav-short\">Posts</span>"
 msgstr "Edytuj <span class=\"screen-reader-text\">%s</span>"
 
-#: template-parts/site-footer.php:5
+#: template-parts/site-footer.php:19
 msgid "International 5O5 Sailing"
 msgstr ""
 
-#: template-parts/site-footer.php:6
+#: template-parts/site-footer.php:20
 msgid "Polish 5O5 Sailing"
 msgstr ""
 
