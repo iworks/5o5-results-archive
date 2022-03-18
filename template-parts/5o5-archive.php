@@ -72,7 +72,12 @@ if ( $archive_title || $archive_subtitle ) {
 if ( have_posts() ) {
 
 	if ( is_post_type_archive( 'iworks_fleet_result' ) ) {
-		echo do_shortcode( '[fleet_regattas_list_countries title="0" flags="1"]' );
+		echo do_shortcode(
+			sprintf(
+				'[fleet_regattas_list_countries title="0" flags="1" year="%s"]',
+				get_query_var( 'iworks_fleet_result_year' )
+			)
+		);
 	}
 
 	?>

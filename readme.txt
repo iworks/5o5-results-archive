@@ -32,6 +32,7 @@ Description
 * Improved boat list on sailor page.
 * Added bottom menu.
 * Added thumbnails.
+* Removed PWA functions. 
 
 = 1.0.1 - 2021-05-06 =
 * Speed optimization.
