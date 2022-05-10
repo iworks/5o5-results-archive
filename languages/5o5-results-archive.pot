@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: 5o5 Results Archive 1.0.2.1652182664427\n"
+"Project-Id-Version: 5o5 Results Archive 1.0.2.1652183657404\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/5o5-results-archive\n"
-"POT-Creation-Date: 2022-05-10 11:37:44+00:00\n"
+"POT-Creation-Date: 2022-05-10 11:54:17+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -124,6 +124,10 @@ msgstr ""
 
 #: template-parts/5o5-archive/manufacturers.php:2
 msgid "Manufacturers"
+msgstr ""
+
+#: template-parts/5o5-archive/manufacturers.php:3
+msgid "Only with 10 or more hulls."
 msgstr ""
 
 #: template-parts/5o5-archive/table-header-iworks_fleet_boat.php:4

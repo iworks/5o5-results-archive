@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: OPI Jobs 0.0.1.1599813946548\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/5o5-results-"
 "archive\n"
-"POT-Creation-Date: 2022-05-10 11:37:44+00:00\n"
+"POT-Creation-Date: 2022-05-10 11:54:17+00:00\n"
 "PO-Revision-Date: 2020-11-19 13:31+0100\n"
 "Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
 "Language-Team: \n"
@@ -128,6 +128,10 @@ msgstr ""
 
 #: template-parts/5o5-archive/manufacturers.php:2
 msgid "Manufacturers"
+msgstr ""
+
+#: template-parts/5o5-archive/manufacturers.php:3
+msgid "Only with 10 or more hulls."
 msgstr ""
 
 #: template-parts/5o5-archive/table-header-iworks_fleet_boat.php:4
