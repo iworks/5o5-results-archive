@@ -7,14 +7,47 @@ body {
     }
 }
 
-#primary,
+.content-wrapper,
 #secondary {
     @include default_width;
     min-width: $width_xs;
+    &.has-sidebar {
+        display: grid;
+        grid-template-columns: 200px auto;
+        grid-template-areas: "header header" "aside main";
+        column-gap: 1em;
+        main {
+            grid-area: main;
+        }
+        aside {
+            grid-area: aside;
+        }
+        header {
+            grid-area: header;
+        }
+    }
 }
 
-.site-main {
-  @include main-padding-lr;
+.content-wrapper {
+    @include main-padding-lr;
+}
+.has-sidebar {
+    aside {
+        padding-bottom: 2em;
+        ul {
+            @include reset_list;
+            a {
+                display: block;
+                padding: 10px;
+            }
+            .current {
+                a {
+                    color: $color_01;
+                    border-bottom: 1px solid $color_01;
+                }
+            }
+        }
+    }
 }
 
 @import 'layout/header';

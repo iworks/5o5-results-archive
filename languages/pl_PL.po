@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: OPI Jobs 0.0.1.1599813946548\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/5o5-results-"
 "archive\n"
-"POT-Creation-Date: 2022-01-25 10:16:20+00:00\n"
+"POT-Creation-Date: 2022-05-10 11:37:44+00:00\n"
 "PO-Revision-Date: 2020-11-19 13:31+0100\n"
 "Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
 "Language-Team: \n"
@@ -45,7 +45,7 @@ msgstr "Najczęściej używane kategorie"
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Proszę spróbować w archiwum miesięcznym. %1$s"
 
-#: front-page.php:19
+#: front-page.php:20
 msgid "Results"
 msgstr ""
 
@@ -94,17 +94,41 @@ msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "Zostaw komentarz<span class=\"screen-reader-text\"> do %s</span>"
 
 #. translators: %s: search query.
-#: search.php:21
+#: search.php:19
 msgid "Search Results for: %s"
 msgstr "Wyniki wyszukiwania dla: %s"
 
-#: single.php:19
+#: single.php:20
 msgid "Previous:"
 msgstr "Poprzedni:"
 
-#: single.php:20
+#: single.php:21
 msgid "Next:"
 msgstr "Następny:"
+
+#: template-parts/5o5-archive/header.php:9
+#, fuzzy
+msgid "Search:"
+msgstr "Szukaj"
+
+#. translators: %s: Number of search results.
+#: template-parts/5o5-archive/header.php:16
+#, fuzzy
+msgid "We found %s result for your search."
+msgid_plural "We found %s results for your search."
+msgstr[0] "Doprecyzuj wyszukiwanie"
+msgstr[1] "Doprecyzuj wyszukiwanie"
+msgstr[2] "Doprecyzuj wyszukiwanie"
+
+#: template-parts/5o5-archive/header.php:25
+msgid ""
+"We could not find any results for your search. You can give it another try "
+"through the search form below."
+msgstr ""
+
+#: template-parts/5o5-archive/manufacturers.php:2
+msgid "Manufacturers"
+msgstr ""
 
 #: template-parts/5o5-archive/table-header-iworks_fleet_boat.php:4
 #: template-parts/5o5-archive/table-header-iworks_fleet_boat_manufacturer.php:4
@@ -166,27 +190,7 @@ msgstr ""
 msgid "Last known start"
 msgstr ""
 
-#: template-parts/5o5-archive.php:27
-#, fuzzy
-msgid "Search:"
-msgstr "Szukaj"
-
-#. translators: %s: Number of search results.
-#: template-parts/5o5-archive.php:34
-#, fuzzy
-msgid "We found %s result for your search."
-msgid_plural "We found %s results for your search."
-msgstr[0] "Doprecyzuj wyszukiwanie"
-msgstr[1] "Doprecyzuj wyszukiwanie"
-msgstr[2] "Doprecyzuj wyszukiwanie"
-
-#: template-parts/5o5-archive.php:43
-msgid ""
-"We could not find any results for your search. You can give it another try "
-"through the search form below."
-msgstr ""
-
-#: template-parts/5o5-archive.php:102
+#: template-parts/5o5-archive.php:47
 msgid "search again"
 msgstr ""
 

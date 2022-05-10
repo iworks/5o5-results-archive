@@ -116,9 +116,10 @@ body {
     .last-results {
         @include default_width_results;
         display: grid;
-        grid-template-columns: repeat( 4, 23% );
+        grid-template-columns: repeat( 4, 23.5% );
+        gap: 2%;
         @media screen and ( max-width: #{ $width_m + 1px } ) {
-            grid-template-columns: repeat( 2, 50% );
+            grid-template-columns: repeat( 2, 49% );
         }
         @media screen and ( max-width: #{ $width_s + 1px } ) {
             display: block;

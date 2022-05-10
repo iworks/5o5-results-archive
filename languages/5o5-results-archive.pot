@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: 5o5 Results Archive 1.0.2.1643105780674\n"
+"Project-Id-Version: 5o5 Results Archive 1.0.2.1652182664427\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/5o5-results-archive\n"
-"POT-Creation-Date: 2022-01-25 10:16:20+00:00\n"
+"POT-Creation-Date: 2022-05-10 11:37:44+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,7 +44,7 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: front-page.php:19
+#: front-page.php:20
 msgid "Results"
 msgstr ""
 
@@ -92,17 +92,38 @@ msgstr ""
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: search.php:21
+#: search.php:19
 #. translators: %s: search query.
 msgid "Search Results for: %s"
 msgstr ""
 
-#: single.php:19
+#: single.php:20
 msgid "Previous:"
 msgstr ""
 
-#: single.php:20
+#: single.php:21
 msgid "Next:"
+msgstr ""
+
+#: template-parts/5o5-archive/header.php:9
+msgid "Search:"
+msgstr ""
+
+#: template-parts/5o5-archive/header.php:16
+#. translators: %s: Number of search results.
+msgid "We found %s result for your search."
+msgid_plural "We found %s results for your search."
+msgstr[0] ""
+msgstr[1] ""
+
+#: template-parts/5o5-archive/header.php:25
+msgid ""
+"We could not find any results for your search. You can give it another try "
+"through the search form below."
+msgstr ""
+
+#: template-parts/5o5-archive/manufacturers.php:2
+msgid "Manufacturers"
 msgstr ""
 
 #: template-parts/5o5-archive/table-header-iworks_fleet_boat.php:4
@@ -165,24 +186,7 @@ msgstr ""
 msgid "Last known start"
 msgstr ""
 
-#: template-parts/5o5-archive.php:27
-msgid "Search:"
-msgstr ""
-
-#: template-parts/5o5-archive.php:34
-#. translators: %s: Number of search results.
-msgid "We found %s result for your search."
-msgid_plural "We found %s results for your search."
-msgstr[0] ""
-msgstr[1] ""
-
-#: template-parts/5o5-archive.php:43
-msgid ""
-"We could not find any results for your search. You can give it another try "
-"through the search form below."
-msgstr ""
-
-#: template-parts/5o5-archive.php:102
+#: template-parts/5o5-archive.php:47
 msgid "search again"
 msgstr ""
 

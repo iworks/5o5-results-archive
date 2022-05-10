@@ -14,18 +14,22 @@
 
 get_header();
 ?>
-<main id="primary" class="site-main">
-	<header class="entry-header">
-		<h1 class="page-title screen-reader-text"><?php esc_html_e( 'Results', '5o5-results-archive' ); ?></h1>
-	</header><!-- .entry-header -->
-	<div class="entry-content">
-<?php echo apply_filters( 'int505_archive_last_results', '' ); ?>
-<?php echo do_shortcode( '[fleet_regattas_list_years]' ); ?>
-<?php echo do_shortcode( '[fleet_regattas_list_countries]' ); ?>
-	</div><!-- .entry-content -->
-	<footer class="entry-footer">
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
-</main><!-- #main -->
+<div class="content-wrapper">
+	<main id="primary" class="site-main">
+		<header class="entry-header">
+			<h1 class="page-title screen-reader-text"><?php esc_html_e( 'Results', '5o5-results-archive' ); ?></h1>
+		</header><!-- .entry-header -->
+		<div class="entry-content">
+<?php
+echo apply_filters( 'int505_archive_last_results', '' );
+echo do_shortcode( '[fleet_regattas_list_years]' );
+echo do_shortcode( '[fleet_regattas_list_countries]' );
+?>
+		</div><!-- .entry-content -->
+		<footer class="entry-footer">
+		</footer><!-- .entry-footer -->
+	</article><!-- #post-<?php the_ID(); ?> -->
+	</main><!-- #main -->
+</div>
 <?php
 get_footer();
