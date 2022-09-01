@@ -87,6 +87,9 @@ body {
                 }
             }
         }
+        .error-404 {
+            margin-bottom: 3em;
+        }
     }
     a {
         color: $color_01;
@@ -123,7 +126,6 @@ footer {
         }
     }
 }
-
 
 @import 'content/login';
 @import 'content/forms';

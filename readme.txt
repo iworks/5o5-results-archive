@@ -28,6 +28,9 @@ Description
 
 * Fixed front page years and countries lists.
 
+= 1.0.3 - 2022-09-01 =
+* Fixed 404 page.
+
 = 1.0.2 - 2022-05-10 =
 * Improved boat list on sailor page.
 * Added bottom menu.

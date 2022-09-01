@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: OPI Jobs 0.0.1.1599813946548\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/5o5-results-"
 "archive\n"
-"POT-Creation-Date: 2022-05-10 11:54:17+00:00\n"
+"POT-Creation-Date: 2022-09-01 10:06:51+00:00\n"
 "PO-Revision-Date: 2020-11-19 13:31+0100\n"
 "Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
 "Language-Team: \n"
@@ -24,26 +24,17 @@ msgstr ""
 "X-Generator: Poedit 2.2.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:17
+#: 404.php:16
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Niestety, nie udało się znaleźć wybranej strony."
 
-#: 404.php:21
+#: 404.php:19
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 "Jak widać nie bardzo jest co wyświetlić w tym miejscu. Może warto spróbować "
 "poszukać lub użyć odnośników?"
-
-#: 404.php:30
-msgid "Most Used Categories"
-msgstr "Najczęściej używane kategorie"
-
-#. translators: %1$s: smiley
-#: 404.php:48
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Proszę spróbować w archiwum miesięcznym. %1$s"
 
 #: front-page.php:20
 msgid "Results"
@@ -305,6 +296,12 @@ msgstr "przez %s"
 msgctxt "list item separator"
 msgid ", "
 msgstr ", "
+
+#~ msgid "Most Used Categories"
+#~ msgstr "Najczęściej używane kategorie"
+
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Proszę spróbować w archiwum miesięcznym. %1$s"
 
 #~ msgid "You do not have an account - register"
 #~ msgstr "Nie masz konta - zarejestruj się"
