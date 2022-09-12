@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: OPI Jobs 0.0.1.1599813946548\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/5o5-results-"
 "archive\n"
-"POT-Creation-Date: 2022-09-01 10:06:51+00:00\n"
+"POT-Creation-Date: 2022-09-12 05:25:03+00:00\n"
 "PO-Revision-Date: 2020-11-19 13:31+0100\n"
 "Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
 "Language-Team: \n"
@@ -260,6 +260,10 @@ msgstr ""
 #: template-parts/site-header.php:38
 msgid "Primary Menu"
 msgstr "Menu główne"
+
+#: template-parts/site-header.php:54
+msgid "Buy Me a Coffee"
+msgstr ""
 
 #. Theme Name of the plugin/theme
 msgid "5o5 Results Archive"
