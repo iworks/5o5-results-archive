@@ -168,3 +168,21 @@ ul {
     }
 }
 
+.kofi-button {
+    display: flex;
+    &:visited {
+        color: $white;
+    }
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 2em;
+        margin-right: 10px;
+        background: {
+            @include image('cup-border.png');
+            position: 50%;
+            size: contain;
+            repeat: no-repeat;
+        }
+    }
+}

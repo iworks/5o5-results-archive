@@ -51,6 +51,7 @@ if ( has_nav_menu( 'primary' ) ) {
 ?>
 				</div>
 			</nav>
+			<a href="https://ko-fi.com/L4L54XNFS" title="Support me on ko-fi.com" class="button kofi-button" target="_blank"> <span class="kofitext"><?php esc_attr_e( 'Buy Me a Coffee', '5o5-results-archive' ); ?></span></a>
 		</div>
 	</div>
 </header>
