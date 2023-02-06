@@ -26,6 +26,9 @@ Description
 
 == Changelog ==
 
+= 1.0.5 - 2023-02-07 =
+
+* Mobile results presentation has been improved.
 * Fixed front page years and countries lists.
 
 = 1.0.3 - 2022-09-01 =

@@ -75,21 +75,44 @@ body {
             }
         }
         @media screen and ( max-width: #{ $width_m + 1px } ) {
-            @media screen and ( max-width: #{ $width_xs + 1px } ) {
+            @media screen and ( max-width: #{ $width_s + 1px } ) {
                 thead {
                     display: none;
                 }
                 td {
-                    display: block;
+                    display: flex;
+                    flex-wrap: true;
+                    text-align: center;
                     a {
                         font-size: 1.1em;
                     }
                 }
-                tr+tr {
-                    td {
-                        &:first-child {
+                tr {
+                    &.fleet-place-row {
+                        display: grid;
+                        grid-template-columns: 3em auto;
+                        grid-template-areas: "place boat" "place helm" "place crew";
+                        .place {
+                            grid-area: place;
+                            border-top: 1px solid $color_primary;
+                            font: {
+                                weight: 600;
+                                size: 1.4em;
+                            }
+                            padding: .5em;
+                        }
+                        .boat_id {
+                            grid-area: boat;
                             border-top: 1px solid $color_primary;
                         }
+                        .helm_name {
+                            grid-area: helm;
+                        }
+                        .crew_name {
+                            grid-area: crew;
+                        }
+                    }
+                    td {
                     }
                 }
             }
@@ -101,6 +124,8 @@ body {
                 }
             }
             td {
+                &.race,
+                &.points,
                 &.fleet-no-results,
                 &.series,
                 &.number-of-races,

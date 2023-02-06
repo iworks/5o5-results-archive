@@ -11,10 +11,12 @@
     .site-header-one {
         min-height: 70px;
         @include default_width;
+        padding-bottom: 10px;
         @media screen and ( min-width: #{ $width_m + 1px } ) {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding-bottom: 0;
         }
         .site-branding {
             display: flex;
@@ -170,6 +172,10 @@ ul {
 
 .kofi-button {
     display: flex;
+    @media screen and ( max-width: $width_m ) {
+        max-width: 200px;
+        margin: 10px auto;
+    }
     &:visited {
         color: $white;
     }

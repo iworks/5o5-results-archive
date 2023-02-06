@@ -19,9 +19,6 @@
             div {
                 display: flex;
                 align-items: center;
-                @media screen and (max-width: $width_m) {
-                    justify-content: center;
-                }
                 @include main-padding-lr;
                 &.site-info-right {
                     justify-content: flex-end;
@@ -30,6 +27,12 @@
                         justify-content: center;
                     }
                 }
+            }
+        }
+        &-left,
+        &-right {
+            @media screen and (max-width: $width_m) {
+                justify-content: center;
             }
         }
     }
