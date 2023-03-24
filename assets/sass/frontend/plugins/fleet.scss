@@ -249,6 +249,17 @@ body {
     .flag {
         padding-left: 1.8em;
     }
+    .entry-title-gravatar {
+        position: relative;
+        .avatar {
+            @include radius;
+        }
+        .flag {
+            position: absolute;
+            bottom: 7px;
+            left: 83px;
+        }
+    }
 }
 .boat-colors {
     svg {

@@ -3,7 +3,7 @@
 	"title": "5o5 Results Archive",
 	"uri": "http://iworks.pl/5o5-results-archive",
 	"description": "",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"repository": {
 		"type": "git",
 		"url": "git@github.com:iworks/5o5-results-archive.git"

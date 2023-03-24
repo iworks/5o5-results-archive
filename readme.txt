@@ -26,6 +26,10 @@ Description
 
 == Changelog ==
 
+= 1.0.6 - 2023-03-24 =
+
+* Gravatar image has been added.
+
 = 1.0.5 - 2023-02-07 =
 
 * Mobile results presentation has been improved.
