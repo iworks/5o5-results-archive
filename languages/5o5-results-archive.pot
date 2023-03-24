@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: 5o5 Results Archive 1.0.5.1675664063979\n"
+"Project-Id-Version: 5o5 Results Archive 1.0.6.1679641630775\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/5o5-results-archive\n"
-"POT-Creation-Date: 2023-02-06 06:14:24+00:00\n"
+"POT-Creation-Date: 2023-03-24 07:07:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -185,12 +185,14 @@ msgstr ""
 msgid "search again"
 msgstr ""
 
+#: template-parts/content-iworks_fleet_person.php:51
 #: template-parts/content-iworks_fleet_result.php:47
 #: template-parts/content.php:37
 #. translators: %s: Name of current post. Only visible to screen readers
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
+#: template-parts/content-iworks_fleet_person.php:64
 #: template-parts/content-iworks_fleet_result.php:60
 #: template-parts/content.php:50
 msgid "Pages:"

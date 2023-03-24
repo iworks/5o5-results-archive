@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: OPI Jobs 0.0.1.1599813946548\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/5o5-results-"
 "archive\n"
-"POT-Creation-Date: 2022-09-12 05:25:03+00:00\n"
+"POT-Creation-Date: 2023-03-24 07:07:10+00:00\n"
 "PO-Revision-Date: 2020-11-19 13:31+0100\n"
 "Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
 "Language-Team: \n"
@@ -190,11 +190,13 @@ msgid "search again"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content-iworks_fleet_person.php:51
 #: template-parts/content-iworks_fleet_result.php:47
 #: template-parts/content.php:37
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Czytaj dalej<span class=\"screen-reader-text\"> \"%s\"</span>"
 
+#: template-parts/content-iworks_fleet_person.php:64
 #: template-parts/content-iworks_fleet_result.php:60
 #: template-parts/content.php:50
 msgid "Pages:"
