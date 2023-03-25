@@ -372,6 +372,18 @@ body {
     &-duvoisin {
         @include iworks_fleet_boat_manufacturer('duvoisin.png');
     }
+    &-binks {
+        @include iworks_fleet_boat_manufacturer('binks.png');
+    }
+    &-fairey-marine {
+        @include iworks_fleet_boat_manufacturer('fairey-marine.webp');
+    }
+    &-parker {
+        @include iworks_fleet_boat_manufacturer('parker.png');
+    }
+    &-rondar {
+        @include iworks_fleet_boat_manufacturer('rondar.png');
+    }
 
     &-pb,
     &-jess {
