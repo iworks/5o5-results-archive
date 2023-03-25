@@ -26,6 +26,10 @@ Description
 
 == Changelog ==
 
+= 1.0.7 - 2023-03-25 =
+
+* Boat builder logo has been added.
+
 = 1.0.6 - 2023-03-24 =
 
 * Gravatar image has been added.

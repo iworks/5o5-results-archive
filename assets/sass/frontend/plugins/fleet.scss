@@ -7,7 +7,8 @@
 
 @mixin default_width_results() {
     @include default_width;
-    @media screen and ( max-width: #{ $width_m + 1px } ) {
+
+    @media screen and (max-width: #{ $width_m + 1px }) {
         margin: {
             left: 10px;
             right: 10px;
@@ -19,111 +20,143 @@
 body {
     .fleet-results {
         width: 100%;
+
         thead {
-            td, th {
+
+            td,
+            th {
                 background-color: $color_01;
             }
+
             .sum {
                 text-align: right;
             }
         }
-        td, th {
+
+        td,
+        th {
             @include plugin_fleet_padding;
         }
+
         th {
             &.serie {
                 display: none;
             }
         }
+
         td {
             &.place {
                 padding-right: 10px;
             }
+
             &.race {
                 width: 3em;
                 text-align: center;
             }
+
             &.series {
                 display: none;
             }
+
             a {
                 display: block;
             }
+
             &.title {
                 padding: 0;
+
                 a {
                     @include plugin_fleet_padding;
                 }
+
                 br {
                     display: none;
                 }
+
                 small {
                     @include plugin_fleet_padding;
+
                     padding: {
                         top: 0;
                         bottom: 0;
                     }
                 }
             }
+
             &.last-known-start {
                 a {
                     display: inline;
                 }
             }
+
             &.date {
                 white-space: nowrap;
             }
         }
-        @media screen and ( max-width: #{ $width_m + 1px } ) {
-            @media screen and ( max-width: #{ $width_s + 1px } ) {
+
+        @media screen and (max-width: #{ $width_m + 1px }) {
+            @media screen and (max-width: #{ $width_s + 1px }) {
                 thead {
                     display: none;
                 }
+
                 td {
                     display: flex;
                     flex-wrap: true;
                     text-align: center;
+
                     a {
                         font-size: 1.1em;
                     }
                 }
+
                 tr {
                     &.fleet-place-row {
                         display: grid;
                         grid-template-columns: 3em auto;
-                        grid-template-areas: "place boat" "place helm" "place crew";
+                        grid-template-areas: "place boat""place helm""place crew";
+
                         .place {
                             grid-area: place;
                             border-top: 1px solid $color_primary;
+
                             font: {
                                 weight: 600;
                                 size: 1.4em;
                             }
+
                             padding: .5em;
                         }
+
                         .boat_id {
                             grid-area: boat;
                             border-top: 1px solid $color_primary;
                         }
+
                         .helm_name {
                             grid-area: helm;
                         }
+
                         .crew_name {
                             grid-area: crew;
                         }
                     }
-                    td {
-                    }
+
+                    td {}
                 }
             }
+
             th {
+
                 &.serie,
                 &.teams,
                 &.races {
                     display: none;
                 }
             }
+
             td {
+
                 &.race,
                 &.points,
                 &.fleet-no-results,
@@ -134,126 +167,157 @@ body {
                 }
             }
         }
+
         h2 {
             text-align: center;
         }
     }
+
     .last-results {
         @include default_width_results;
         display: grid;
-        grid-template-columns: repeat( 4, 23.5% );
+        grid-template-columns: repeat(4, 23.5%);
         gap: 2%;
-        @media screen and ( max-width: #{ $width_m + 1px } ) {
-            grid-template-columns: repeat( 2, 49% );
+
+        @media screen and (max-width: #{ $width_m + 1px }) {
+            grid-template-columns: repeat(2, 49%);
         }
-        @media screen and ( max-width: #{ $width_s + 1px } ) {
+
+        @media screen and (max-width: #{ $width_s + 1px }) {
             display: block;
         }
+
         ul {
             @include reset;
+
             a {
                 display: block;
                 padding: 5px 0;
             }
         }
+
         .results {
             padding-bottom: 2em;
         }
     }
+
     .results-years-list,
     .results-countries-list {
         @include default_width_results;
+
         ul {
             @include reset;
-            @media screen and ( min-width: #{ $width_m } ) {
+
+            @media screen and (min-width: #{ $width_m }) {
                 display: grid;
-                grid-template-columns: repeat( 5, 20% );
+                grid-template-columns: repeat(5, 20%);
             }
-            @media screen and ( max-width: #{ $width_l + 1px } ) {
-                grid-template-columns: repeat( 4, 25% );
+
+            @media screen and (max-width: #{ $width_l + 1px }) {
+                grid-template-columns: repeat(4, 25%);
             }
-            @media screen and ( max-width: #{ $width_m + 1px } ) {
-                grid-template-columns: repeat( 2, 50% );
+
+            @media screen and (max-width: #{ $width_m + 1px }) {
+                grid-template-columns: repeat(2, 50%);
             }
-            @media screen and ( max-width: #{ $width_xs + 1px } ) {
-            }
+
+            @media screen and (max-width: #{ $width_xs + 1px }) {}
         }
+
         a {
             align-items: center;
             display: flex;
             font-size: 1.3em;
             padding: .5em;
             width: 100%;
-            @media screen and ( min-width: #{ $width_m } ) {
+
+            @media screen and (min-width: #{ $width_m }) {
                 justify-content: center;
                 text-align: center;
             }
+
             &:after {
-                @media screen and ( min-width: #{ $width_m } ) {
+                @media screen and (min-width: #{ $width_m }) {
                     content: "";
                     display: block;
                     padding-bottom: 30%;
                 }
-                @media screen and ( min-width: #{ $width_l } ) {
+
+                @media screen and (min-width: #{ $width_l }) {
                     content: "";
                     display: block;
                     padding-bottom: 20%;
                 }
             }
+
             &:hover {
                 background-color: $color_primary;
             }
         }
     }
+
     .results-countries-list {
         ul {
             display: grid;
-            @media screen and ( max-width: #{ $width_m + 1px } ) {
-                grid-template-columns: repeat( 3, 33% );
+
+            @media screen and (max-width: #{ $width_m + 1px }) {
+                grid-template-columns: repeat(3, 33%);
             }
-            @media screen and ( max-width: #{ $width_s + 1px } ) {
-                grid-template-columns: repeat( 2, 50% );
+
+            @media screen and (max-width: #{ $width_s + 1px }) {
+                grid-template-columns: repeat(2, 50%);
             }
         }
     }
+
     .results-years-list {
         ul {
             display: grid;
-            grid-template-columns: repeat( 8, 12% );
-            @media screen and ( max-width: #{ $width_l + 1px } ) {
-                grid-template-columns: repeat( 6, 16.5% );
+            grid-template-columns: repeat(8, 12%);
+
+            @media screen and (max-width: #{ $width_l + 1px }) {
+                grid-template-columns: repeat(6, 16.5%);
             }
-            @media screen and ( max-width: #{ $width_m + 1px } ) {
-                grid-template-columns: repeat( 4, 25% );
+
+            @media screen and (max-width: #{ $width_m + 1px }) {
+                grid-template-columns: repeat(4, 25%);
             }
-            @media screen and ( max-width: #{ $width_xs + 1px } ) {
-                grid-template-columns: repeat( 3, 33% );
+
+            @media screen and (max-width: #{ $width_xs + 1px }) {
+                grid-template-columns: repeat(3, 33%);
             }
         }
-        a {
-        }
+
+        a {}
     }
+
     table {
         &.fleet-results-meta {
             width: unset;
+
             td {
                 padding: 5px 10px;
             }
         }
     }
+
     .iworks-fleet-trophies {
         table {
             width: unset;
         }
     }
+
     .flag {
         padding-left: 1.8em;
     }
+
     .entry-title-gravatar {
         position: relative;
+
         .avatar {
             @include radius;
         }
+
         .flag {
             position: absolute;
             bottom: 7px;
@@ -261,25 +325,30 @@ body {
         }
     }
 }
+
 .boat-colors {
     svg {
-        @media screen and ( max-width: #{ $width_s + 1px } ) {
+        @media screen and (max-width: #{ $width_s + 1px }) {
             max-width: 200px;
         }
-        @media screen and ( max-width: #{ $width_xs + 1px } ) {
+
+        @media screen and (max-width: #{ $width_xs + 1px }) {
             max-width: 150px;
         }
     }
 
 }
+
 .iworks-fleet-owner-boats-list {
     @include reset_list;
     display: flex;
     flex-wrap: wrap;
+
     a {
         padding: .5em;
     }
 }
+
 .type-iworks_fleet_result {
     .entry-content {
         background: {
@@ -290,3 +359,24 @@ body {
     }
 }
 
+@mixin iworks_fleet_boat_manufacturer($image) {
+    background: {
+        position: 100% 0;
+        repeat: no-repeat;
+        size: 200px;
+        image: url(#{$image_root}logos/builders/#{$image}?v=#{$version});
+    }
+}
+
+.iworks_fleet_boat_manufacturer {
+    &-duvoisin {
+        @include iworks_fleet_boat_manufacturer('duvoisin.png');
+    }
+
+    &-pb,
+    &-jess {
+        &-ovington {
+            @include iworks_fleet_boat_manufacturer('ovington.webp');
+        }
+    }
+}
