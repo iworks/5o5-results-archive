@@ -11,9 +11,8 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) {
-			$prefix = '<h1 class="entry-title">';
-			$hash   = get_post_meta( get_the_ID(), 'iworks_fleet_contact_gravatar', true );
-			if ( ! empty( $hash ) ) {
+			$prefix     = '<h1 class="entry-title">';
+			$hash       = get_post_meta( get_the_ID(), 'iworks_fleet_contact_gravatar', true );
 				$size   = 128;
 				$prefix = sprintf(
 					'<h1 class="entry-title entry-title-gravatar"><img src="%2$s" class="avatar avatar-%1$d photo" width="%1$d" height="%1$d" loading="lazy" decoding="async" />',
@@ -27,7 +26,6 @@
 						'https://gravatar.com/avatar/' . $hash
 					)
 				);
-			}
 			the_title( $prefix, '</h1>' );
 		} else {
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
