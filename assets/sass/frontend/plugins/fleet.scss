@@ -114,7 +114,7 @@ body {
                     &.fleet-place-row {
                         display: grid;
                         grid-template-columns: 3em auto;
-                        grid-template-areas: "place boat""place helm""place crew";
+                        grid-template-areas: "place boat" "place helm" "place crew";
 
                         .place {
                             grid-area: place;

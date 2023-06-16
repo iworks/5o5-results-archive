@@ -1,19 +1,42 @@
 @import '_mixin';
+@import 'settings';
 
-.bg-color_primary { background-color: $color_primary; }
-.bg-color_accent { background-color: $color_accent; }
-.bg-color_alert { background-color: $color_alert; }
+.bg-color_primary {
+    background-color: $color_primary;
+}
 
-.bg-color_01 { background-color: $color_01; }
-.bg-color_02 { background-color: $color_02; }
+.bg-color_accent {
+    background-color: $color_accent;
+}
 
-.bg-color_gray_1 { background-color: $color_gray_1; }
-.bg-color_gray_2 { background-color: $color_gray_2; }
-.bg-color_gray_3 { background-color: $color_gray_3; }
+.bg-color_alert {
+    background-color: $color_alert;
+}
+
+.bg-color_01 {
+    background-color: $color_01;
+}
+
+.bg-color_02 {
+    background-color: $color_02;
+}
+
+.bg-color_gray_1 {
+    background-color: $color_gray_1;
+}
+
+.bg-color_gray_2 {
+    background-color: $color_gray_2;
+}
+
+.bg-color_gray_3 {
+    background-color: $color_gray_3;
+}
 
 ul.test {
     @include reset;
     display: flex;
+
     li {
         display: block;
         width: 50px;
@@ -24,9 +47,10 @@ ul.test {
 @mixin title() {
     margin: 30px 0 40px;
     @include font_metropolis_light;
-    @include font( 30, 36 );
-    @media screen and ( max-width: $width_m ) {
-        @include font( 20, 24 );
+    @include font(30, 36);
+
+    @media screen and (max-width: $width_m ) {
+        @include font(20, 24);
         text-align: center;
     }
 }
@@ -34,25 +58,30 @@ ul.test {
 body {
     background-color: $white;
     color: $color_primary;
-    @include font( 14, 22 );
+    @include font(14, 22);
     @include font_metropolis;
     @include a_color_primary;
+
     .button {
         @include button;
+
         &.button-revers {
             @include button_reverse;
         }
     }
+
     .page-header {
         .page-title {
             @include title;
         }
     }
+
     .archive-header {
         .archive-title {
             @include title;
         }
     }
+
     main {
         article {
             header {
@@ -60,42 +89,56 @@ body {
                     @include title;
                 }
             }
-            h2, h3, h4, h5, h6 {
+
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
                 @include font_metropolis_light;
-                @media screen and ( max-width: $width_m ) {
+
+                @media screen and (max-width: $width_m ) {
                     text-align: center;
                     padding: 0 1em;
                 }
             }
-            @media screen and ( max-width: $width_m ) {
+
+            @media screen and (max-width: $width_m ) {
                 h2 {
-                    @include font( 17, 20 );
+                    @include font(17, 20);
                 }
             }
         }
+
         .navigation {
-            @media screen and ( max-width: $width_m ) {
+            @media screen and (max-width: $width_m ) {
                 padding: 0 1em;
             }
+
             &.pagination {
                 max-width: 400px;
                 margin: 0 auto;
                 padding-bottom: 1em;
+
                 .nav-links {
                     display: flex;
                     justify-content: space-between;
                 }
             }
         }
+
         .error-404 {
             margin-bottom: 3em;
         }
     }
+
     a {
         color: $color_01;
+
         &:visited {
-            color: lighten( $color_01, 10 );
+            color: lighten($color_01, 10);
         }
+
         &:hover {
             color: $color_alert;
         }
@@ -105,6 +148,7 @@ body {
 footer {
     &.with-buttons {
         margin-top: 33px;
+
         &:before {
             content: "";
             display: block;
@@ -112,16 +156,20 @@ footer {
             background: transparent linear-gradient(90deg, #FFFFFF 0%, #2D2683 17%, #2D2683 83%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
             opacity: 0.5;
         }
+
         ul {
             @include reset;
             margin-top: 45px;
             display: flex;
             column-gap: 20px;
+
             .processing {
                 display: none;
             }
         }
-        ul, p {
+
+        ul,
+        p {
             @include short_width;
         }
     }
@@ -132,4 +180,3 @@ footer {
 @import 'content/front-page';
 @import 'content/search';
 @import 'content/lds-spinner';
-
