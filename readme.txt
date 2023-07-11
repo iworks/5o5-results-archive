@@ -26,6 +26,10 @@ Description
 
 == Changelog ==
 
+= 1.0.8 - 2023-07-11 =
+* The empty Gravatar has been fixed.
+* The Gravatar has been added to OpenGraph.
+
 = 1.0.7 - 2023-03-25 =
 
 * Boat builder logo has been added.

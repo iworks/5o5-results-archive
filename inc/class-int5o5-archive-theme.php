@@ -60,6 +60,10 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		 */
 		add_filter( 'int505_archive_last_update', array( $this, 'get_last_update_string' ) );
 		add_filter( 'int505_archive_last_results', array( $this, 'get_last_results_html' ) );
+		/**
+		 * Integration: OG — Better Share on Social Media
+		 */
+		add_filter( 'og_og_image_value', array( $this, 'filter_og_og_image_value_for_single_person' ) );
 	}
 
 	public function iworks_pwa_offline_urls_set( $set ) {
@@ -291,6 +295,23 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 				'footer' => esc_html__( 'Footer', '5o5-results-archive' ),
 			)
 		);
+	}
+
+	public function filter_og_og_image_value_for_single_person( $value ) {
+		if ( is_singular( 'iworks_fleet_person' ) ) {
+			$hash = get_post_meta( get_the_ID(), 'iworks_fleet_contact_gravatar', true );
+			if ( ! empty( $hash ) ) {
+				return add_query_arg(
+					array(
+						's' => 512,
+						'd' => 'mm',
+						'r' => 'g',
+					),
+					'https://gravatar.com/avatar/' . $hash
+				);
+			}
+		}
+		return $value;
 	}
 }
 
