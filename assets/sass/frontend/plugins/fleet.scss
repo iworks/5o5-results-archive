@@ -18,14 +18,25 @@
 
 
 body {
+
+	.iworks-fleet-ranking-table,
 	.fleet-results {
 		width: 100%;
+
+		border: {
+			collapse: collapse;
+		}
 
 		thead {
 
 			td,
 			th {
 				background-color: var(--color-theme-01);
+				color: var(--color-theme-03-gray);
+
+				a {
+					color: var(--color-theme-03-gray);
+				}
 			}
 
 			.sum {
@@ -402,6 +413,20 @@ article {
 		&-jess {
 			&-ovington {
 				@include iworks_fleet_boat_manufacturer('ovington.webp');
+			}
+		}
+	}
+}
+
+.iworks {
+	&-fleet {
+		&-ranking {
+			&-table {
+				&-points {
+					text: {
+						align: center;
+					}
+				}
 			}
 		}
 	}

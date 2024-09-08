@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: 5o5 Results Archive 1.0.8.1686906662386\n"
+"Project-Id-Version: 5o5 Results Archive 1.0.8.1689066074804\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/5o5-results-archive\n"
-"POT-Creation-Date: 2023-06-16 09:11:02+00:00\n"
+"POT-Creation-Date: 2023-07-11 09:01:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,19 +47,19 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/class-int5o5-archive-theme.php:231
+#: inc/class-int5o5-archive-theme.php:235
 msgid "unknown"
 msgstr ""
 
-#: inc/class-int5o5-archive-theme.php:237
+#: inc/class-int5o5-archive-theme.php:241
 msgid "Last update: %s"
 msgstr ""
 
-#: inc/class-int5o5-archive-theme.php:286
+#: inc/class-int5o5-archive-theme.php:290
 msgid "Primary"
 msgstr ""
 
-#: inc/class-int5o5-archive-theme.php:291
+#: inc/class-int5o5-archive-theme.php:295
 msgid "Footer"
 msgstr ""
 
@@ -189,14 +189,12 @@ msgstr ""
 msgid "search again"
 msgstr ""
 
-#: template-parts/content-iworks_fleet_person.php:49
 #: template-parts/content-iworks_fleet_result.php:47
 #: template-parts/content.php:37
 #. translators: %s: Name of current post. Only visible to screen readers
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: template-parts/content-iworks_fleet_person.php:62
 #: template-parts/content-iworks_fleet_result.php:60
 #: template-parts/content.php:50
 msgid "Pages:"
