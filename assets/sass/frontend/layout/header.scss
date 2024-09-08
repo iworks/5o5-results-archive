@@ -1,194 +1,236 @@
 @import '_mixin';
 
 .site-header {
-    position: relative;
-    .site-header-one-container {
-        @include boxshadow( 0px 3px 6px transparentize( $black, 0.85 ) );
-        @media screen and ( min-width: #{ $width_m + 1px } ) {
-            @include main-padding-lr;
-        }
-    }
-    .site-header-one {
-        min-height: 70px;
-        @include default_width;
-        padding-bottom: 10px;
-        @media screen and ( min-width: #{ $width_m + 1px } ) {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: 0;
-        }
-        .site-branding {
-            display: flex;
-            align-items: center;
-        }
-        .search {
-            @media screen and ( max-width: #{ $width_m } ) {
-                display: flex;
-                padding: 10px;
-                align-items: center;
-                form {
-                    display: inline-block;
-                    margin: 0 auto;
-                }
-            }
-            .search-field {
-                @include field;
-            }
-            .search-submit {
-                @include button;
-            }
-        }
-    }
-    .site-branding {
-        @media screen and ( max-width $width_m ) {
-            @include main-padding-lr;
-            .site-description {
-                margin: 0;
-            }
-        }
-        @media screen and ( max-width: #{ $width_m } ) {
-            padding: 0 20px;
-        }
-        .site-title {
-            display: none;
-        }
-        .site-description {
-            display: flex;
-            align-items: center;
-            color: $color_01;
-            @media screen and ( min-width: #{ $width_m + 1px } ) {
-                max-width: 210px;
-            }
-            @include font_metropolis_light_italic;
-            @include font( 12, 14 );
-            strong, span {
-                display: block;
-            }
-            &:before {
-                display: block;
-                content: "";
-                width: 51px;
-                height: 35px;
-                margin-right: 10px;
-                background: {
-                    @include image( 'logo.svg' );
-                    repeat: no-repeat;
-                    position: center;
-                    size: contain;
-                }
-            }
-        }
-    }
-    #site-navigation {
-        .menu-toggle {
-            @media screen and ( min-width: #{ $width_m + 1px } ) {
-                display: none;
-            }
-            width: 42px;
-            height: 40px;
-            border: 0;
-            @include radius(0);
-            background: {
-                color: $white;
-                repeat: no-repeat;
-                position: 50%;
-                @include icon( 'menu/open.svg' );
-            }
-            position: absolute;
-            top: 0;
-            right: 10px;
-            overflow: hidden;
-            text-indent: -999em;
-        }
-        &.toggled {
-            @media screen and ( max-width: $width_m ) {
-                background-color: $color_gray_1;
-                padding: 10px 0;
-                .menu-toggle {
-                    background: {
-                        @include icon( 'menu/close.svg' );
-                    }
-                }
-                #primary-menu {
-                    display: block;
-                    a {
-                    }
-                    .primary-menu {
-                        display: block;
-                        li {
-                            padding: 0;
-                            margin: 5px 0;
-                        }
-                    }
-                    a {
-                        display: block;
-                        background-image: none;
-                        padding: 5px 10px;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-        @media screen and ( max-width: $width_m ) {
-            #primary-menu {
-                display: none;
-            }
-        }
-        .button,
-        .link {
-            margin-left: 1em;
-            &:first-child {
-                margin-left: 0;
-            }
-        }
-        .button {
-            &.current-page {
-                background-color: $color_accent;
-                color: $white;
-            }
-        }
-        .link {
-            @include link;
-        }
-    }
+	position: relative;
+
+	.site-header-one-container {
+		@include boxshadow(0px 3px 6px transparentize($black, 0.85));
+
+		@media screen and (min-width: #{ $width_m + 1px }) {
+			@include main-padding-lr;
+		}
+	}
+
+	.site-header-one {
+		min-height: 70px;
+		@include default_width;
+		padding-bottom: 10px;
+
+		@media screen and (min-width: #{ $width_m + 1px }) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-bottom: 0;
+		}
+
+		.site-branding {
+			display: flex;
+			align-items: center;
+		}
+
+		.search {
+			@media screen and (max-width: #{ $width_m }) {
+				display: flex;
+				padding: 10px;
+				align-items: center;
+
+				form {
+					display: inline-block;
+					margin: 0 auto;
+				}
+			}
+
+			.search-field {
+				@include field;
+			}
+
+			.search-submit {
+				@include button;
+			}
+		}
+	}
+
+	.site-branding {
+		@media screen and (max-width $width_m ) {
+			@include main-padding-lr;
+
+			.site-description {
+				margin: 0;
+			}
+		}
+
+		@media screen and (max-width: #{ $width_m }) {
+			padding: 0 20px;
+		}
+
+		.site-title {
+			display: none;
+		}
+
+		.site-description {
+			display: flex;
+			align-items: center;
+			color: var(--color-theme-01);
+
+			@media screen and (min-width: #{ $width_m + 1px }) {
+				max-width: 210px;
+			}
+
+			@include font_metropolis_light_italic;
+			@include font(12, 14);
+
+			strong,
+			span {
+				display: block;
+			}
+
+			&:before {
+				display: block;
+				content: "";
+				width: 51px;
+				height: 35px;
+				margin-right: 10px;
+
+				background: {
+					@include image('logo.svg');
+					repeat: no-repeat;
+					position: center;
+					size: contain;
+				}
+			}
+		}
+	}
+
+	#site-navigation {
+		.menu-toggle {
+			@media screen and (min-width: #{ $width_m + 1px }) {
+				display: none;
+			}
+
+			width: 42px;
+			height: 40px;
+			border: 0;
+			@include radius(0);
+
+			background: {
+				color: $white;
+				repeat: no-repeat;
+				position: 50%;
+				@include icon('menu/open.svg');
+			}
+
+			position: absolute;
+			top: 0;
+			right: 10px;
+			overflow: hidden;
+			text-indent: -999em;
+		}
+
+		&.toggled {
+			@media screen and (max-width: $width_m ) {
+				background-color: var(--color-theme-03-gray);
+				padding: 10px 0;
+
+				.menu-toggle {
+					background: {
+						@include icon('menu/close.svg');
+					}
+				}
+
+				#primary-menu {
+					display: block;
+
+					a {}
+
+					.primary-menu {
+						display: block;
+
+						li {
+							padding: 0;
+							margin: 5px 0;
+						}
+					}
+
+					a {
+						display: block;
+						background-image: none;
+						padding: 5px 10px;
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: $width_m ) {
+			#primary-menu {
+				display: none;
+			}
+		}
+
+		.button,
+		.link {
+			margin-left: 1em;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		.button {
+			&.current-page {
+				background-color: var(--color-theme-accent);
+				color: $white;
+			}
+		}
+
+		.link {
+			@include link;
+		}
+	}
 }
+
 /** menu */
 ul {
-    &.primary-menu {
-        @include reset;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        li {
-            padding: 0 10px;
-        }
-        a {
-            display: block;
-            line-height: 1.2;
-        }
-    }
+	&.primary-menu {
+		@include reset;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+
+		li {
+			padding: 0 10px;
+		}
+
+		a {
+			display: block;
+			line-height: 1.2;
+		}
+	}
 }
 
 .kofi-button {
-    display: flex;
-    @media screen and ( max-width: $width_m ) {
-        max-width: 200px;
-        margin: 10px auto;
-    }
-    &:visited {
-        color: $white;
-    }
-    &:before {
-        content: "";
-        display: inline-block;
-        width: 2em;
-        margin-right: 10px;
-        background: {
-            @include image('cup-border.png');
-            position: 50%;
-            size: contain;
-            repeat: no-repeat;
-        }
-    }
+	display: flex;
+
+	@media screen and (max-width: $width_m ) {
+		max-width: 200px;
+		margin: 10px auto;
+	}
+
+	&:visited {
+		color: $white;
+	}
+
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 2em;
+		margin-right: 10px;
+
+		background: {
+			@include image('cup-border.png');
+			position: 50%;
+			size: contain;
+			repeat: no-repeat;
+		}
+	}
 }

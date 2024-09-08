@@ -1,26 +1,36 @@
 @import '_mixin';
 
-$color_accent: #ffe180;
 $color_black: #2a2d2e;
 
 :root {
-    /* COLORS */
-    /* LINKS COLORS */
-    /* BACKGROUND COLORS */
-    /** TEXT COLORS */
-    /** BUTTONS */
-    /** statuses */
+	/* COLORS */
+	--color-theme-primary: #2a2d2e;
+	--color-theme-accent: #f77f00;
+	--color-theme-alert: #d62828;
 
-    /** MARGIN & PADDING */
-    --padding-large: 40px;
-    --padding-default: 30px;
-    --padding-middle: 20px;
-    --padding-small: 15px;
-    --padding-xsmall: 10px;
-    --padding-xxsmall: 5px;
+	--color-theme-01: #003049;
+	--color-theme-02: #002442;
+	--color-theme-03-gray: #f5f5f5;
+	--color-theme-04-gray: #707070;
+	--color-theme-05-gray: #ddd;
 
-    /** radius **/
-    /** font-size **/
-    /* field width */
+
+	/* LINKS COLORS */
+	/* BACKGROUND COLORS */
+	/** TEXT COLORS */
+	/** BUTTONS */
+	/** statuses */
+
+	/** MARGIN & PADDING */
+	--padding-large: 40px;
+	--padding-default: 30px;
+	--padding-middle: 20px;
+	--padding-small: 15px;
+	--padding-xsmall: 10px;
+	--padding-xxsmall: 5px;
+
+	/** radius **/
+	/** font-size **/
+	/* field width */
 
 }

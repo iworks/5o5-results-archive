@@ -1,86 +1,103 @@
 @import '_mixin';
 
 .site-footer {
-    color: $white;
-    background-color: $color_01;
-    padding: 11px;
-    @media screen and (max-width: $width_m) {
-        padding: 0;
-    }
-    .site-info {
-        @include default_width;
-        display: flex;
-        justify-content: space-between;
-        @include font( 12, 30 );
-        @media screen and (max-width: $width_m) {
-            flex-direction: column;
-        }
-        > {
-            div {
-                display: flex;
-                align-items: center;
-                @include main-padding-lr;
-                &.site-info-right {
-                    justify-content: flex-end;
-                    @media screen and (max-width: $width_m) {
-                        padding: 10px;
-                        justify-content: center;
-                    }
-                }
-            }
-        }
-        &-left,
-        &-right {
-            @media screen and (max-width: $width_m) {
-                justify-content: center;
-            }
-        }
-    }
-    .site-info-right {
-        a {
-            display: inline-block;
-            width: 60px;
-            height: 30px;
-            text-indent: -999em;
-            overflow: hidden;
-            opacity: .4;
-            background: {
-                repeat: no-repeat;
-                size: contain;
-            }
-            &:hover {
-                opacity: 1;
-            }
-            &.int {
-                background: {
-                    @include image( 'logos/5o5-int.svg' );
-                }
-            }
-            &.pl {
-                background: {
-                    @include image( 'logos/5o5-pl.svg' );
-                }
-            }
-        }
-    }
-    .site-info-left {
-        color: darken( $white, 20% );
-        a {
-            color: $white;
-        }
-        @include reset_list;
-        display: flex;
-        li {
-            padding-right: 10px;
-            + {
-                li {
-                    &:before {
-                        content: "|";
-                        padding-right: 10px;
-                    }
-                }
-            }
-        }
-    }
+	color: $white;
+	background-color: var(--color-theme-01);
+	padding: 11px;
+
+	@media screen and (max-width: $width_m) {
+		padding: 0;
+	}
+
+	.site-info {
+		@include default_width;
+		display: flex;
+		justify-content: space-between;
+		@include font(12, 30);
+
+		@media screen and (max-width: $width_m) {
+			flex-direction: column;
+		}
+
+		> {
+			div {
+				display: flex;
+				align-items: center;
+				@include main-padding-lr;
+
+				&.site-info-right {
+					justify-content: flex-end;
+
+					@media screen and (max-width: $width_m) {
+						padding: 10px;
+						justify-content: center;
+					}
+				}
+			}
+		}
+
+		&-left,
+		&-right {
+			@media screen and (max-width: $width_m) {
+				justify-content: center;
+			}
+		}
+	}
+
+	.site-info-right {
+		a {
+			display: inline-block;
+			width: 60px;
+			height: 30px;
+			text-indent: -999em;
+			overflow: hidden;
+			opacity: .4;
+
+			background: {
+				repeat: no-repeat;
+				size: contain;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&.int {
+				background: {
+					@include image('logos/5o5-int.svg');
+				}
+			}
+
+			&.pl {
+				background: {
+					@include image('logos/5o5-pl.svg');
+				}
+			}
+		}
+	}
+
+	.site-info-left {
+		color: darken($white, 20%);
+
+		a {
+			color: $white;
+		}
+
+		@include reset_list;
+		display: flex;
+
+		li {
+			padding-right: 10px;
+
+			+ {
+				li {
+					&:before {
+						content: "|";
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+	}
 
 }

@@ -1,46 +1,51 @@
 @import '_mixin';
-body {
-    &.search-results {
-        article {
-            header {
-                .entry-title {
-                    margin: 0;
-                    @include font( 14, 22 );
-                }
-            }
-            &.iworks_fleet_result,
-            &.iworks_fleet_boat {
-                .entry-title {
-                    a {
-                        padding-left: 1.2em;
-                        background: {
-                            @include icon( 'boat.svg' );
-                            size: auto 1em;
-                            repeat: no-repeat;
-                        }
-                    }
-                }
-            }
-            &.iworks_fleet_result {
-                .entry-title {
-                    a {
-                        background: {
-                            @include icon( 'trophy.svg' );
-                        }
-                    }
-                }
-            }
-        }
-    }
-    &.search-no-results {
-        .page-header {
-            h1 {
-                color: $color_alert;
-            }
-        }
-        .page-content {
-            padding-bottom: 2em;
-        }
-    }
-}
 
+body {
+	&.search-results {
+		article {
+			header {
+				.entry-title {
+					margin: 0;
+					@include font(14, 22);
+				}
+			}
+
+			&.iworks_fleet_result,
+			&.iworks_fleet_boat {
+				.entry-title {
+					a {
+						padding-left: 1.2em;
+
+						background: {
+							@include icon('boat.svg');
+							size: auto 1em;
+							repeat: no-repeat;
+						}
+					}
+				}
+			}
+
+			&.iworks_fleet_result {
+				.entry-title {
+					a {
+						background: {
+							@include icon('trophy.svg');
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.search-no-results {
+		.page-header {
+			h1 {
+				color: var(--color-theme-alert);
+			}
+		}
+
+		.page-content {
+			padding-bottom: 2em;
+		}
+	}
+}
