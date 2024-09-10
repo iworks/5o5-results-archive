@@ -1,15 +1,15 @@
-# <!=Copyright (C) 2023 Waldemar Więckowski
+# <!=Copyright (C) 2024 Waldemar Więckowski
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: 5o5 Results Archive 1.0.8.1689066074804\n"
+"Project-Id-Version: 5o5 Results Archive 1.0.9.1725958401789\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/theme/5o5-results-archive\n"
-"POT-Creation-Date: 2023-07-11 09:01:14+00:00\n"
+"POT-Creation-Date: 2024-09-10 08:53:21+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2023-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
@@ -125,6 +125,10 @@ msgstr ""
 msgid "Only with 10 or more hulls."
 msgstr ""
 
+#: template-parts/5o5-archive/result-links.php:27
+msgid "Read or see on other websites"
+msgstr ""
+
 #: template-parts/5o5-archive/table-header-iworks_fleet_boat.php:4
 #: template-parts/5o5-archive/table-header-iworks_fleet_boat_manufacturer.php:4
 msgid "Number"
@@ -195,7 +199,7 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: template-parts/content-iworks_fleet_result.php:60
+#: template-parts/content-iworks_fleet_result.php:61
 #: template-parts/content.php:50
 msgid "Pages:"
 msgstr ""

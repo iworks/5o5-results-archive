@@ -4,7 +4,7 @@ Contributors: iworks
 Tags: 
 
 Requires at least: 4.5
-Tested up to: 5.4
+Tested up to: 6.6
 Requires PHP: 7.2
 Stable tag: THEME_VERSION
 License: GNU General Public License v2 or later
@@ -25,6 +25,10 @@ Description
 == Frequently Asked Questions ==
 
 == Changelog ==
+
+= 1.0.9 - 2024-09-10 =
+* The section read more has been added.
+* Results showing has been improved.
 
 = 1.0.8 - 2023-07-11 =
 * The empty Gravatar has been fixed.
