@@ -125,6 +125,13 @@ body {
 					justify-content: space-between;
 				}
 			}
+			&.post {
+				&-navigation {
+					padding: {
+						top: var(--padding-middle);
+					}
+				}
+			}
 		}
 
 		.error-404 {

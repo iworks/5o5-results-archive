@@ -184,6 +184,75 @@ body {
 		}
 	}
 
+	.fleet {
+		&-results {
+			&-links {
+				padding: {
+					top: var(--padding-middle);
+					left: var(--padding-small);
+					right: var(--padding-small);
+				}
+				h2 {
+					opacity: .8;
+				}
+				ul {
+					@include reset_list;
+					li {
+						padding: var(--padding-xxsmall) var(--padding-small);
+					}
+				}
+				a {
+					align: {
+						items: center;
+					}
+					display: grid;
+					grid: {
+						template: {
+							columns: 32px auto;
+						}
+					}
+					gap: var(--padding-xsmall);
+					&:before {
+						content: "";
+						display: block;
+						width: 32px;
+						height: 32px;
+						@include iconb('file-lines-solid.svg');
+					}
+					&[href*="youtu.be"],
+					&[href*="youtube"] {
+						&:before {
+							background: {
+								@include icon('youtube-brands-solid.svg');
+							}
+						}
+					}
+					&[href*="facebook.com"] {
+						&:before {
+							background: {
+								@include icon('facebook-f-brands-solid.svg');
+							}
+						}
+					}
+					&[href*="upwind24"] {
+						&:before {
+							background: {
+								@include icon('upwind24.svg');
+							}
+						}
+					}
+					&[href*="int505.org"] {
+						&:before {
+							background: {
+								@include icon('5o5.svg');
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	.last-results {
 		@include default_width_results;
 		display: grid;

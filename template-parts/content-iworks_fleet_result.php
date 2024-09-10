@@ -54,6 +54,7 @@ if ( has_post_thumbnail() ) {
 				wp_kses_post( get_the_title() )
 			)
 		);
+			get_template_part( 'template-parts/5o5-archive/result', 'links' );
 
 		wp_link_pages(
 			array(

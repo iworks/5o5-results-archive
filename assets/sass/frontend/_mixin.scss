@@ -199,7 +199,7 @@ $image_root: 'assets/images/';
 	width: 100%;
 }
 
-@mixin random_border_color() {
+@mixin rbc() {
 	border: 1px solid rgb(random(255), random(255), random(255));
 }
 
@@ -407,3 +407,13 @@ $font_root: 'assets/fonts/';
 		padding-right: 10px;
 	}
 }
+
+@mixin iconb($image ) {
+	background: {
+		repeat: no-repeat;
+		position: 50% 50%;
+		size: contain;
+		@include icon(#{$image});
+	}
+}
+
