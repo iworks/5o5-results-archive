@@ -1,7 +1,7 @@
 === THEME_TITLE  ===
 
 Contributors: iworks
-Tags: 
+Tags:
 
 Requires at least: 4.5
 Tested up to: 6.6
@@ -25,6 +25,9 @@ Description
 == Frequently Asked Questions ==
 
 == Changelog ==
+
+= 1.1.0 - 2024-09-21 =
+* A serie has been shown.
 
 = 1.0.9 - 2024-09-10 =
 * The section read more has been added.

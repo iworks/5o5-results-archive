@@ -182,6 +182,16 @@ body {
 		h2 {
 			text-align: center;
 		}
+
+		&-meta {
+			&-serie {
+				ul {
+					@include reset_list;
+					display: flex;
+					gap: var(--padding-middle);
+				}
+			}
+		}
 	}
 
 	.fleet {
