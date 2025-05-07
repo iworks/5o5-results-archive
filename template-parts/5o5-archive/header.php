@@ -28,6 +28,7 @@ if ( is_search() ) {
 	$archive_title    = get_the_archive_title();
 	$archive_subtitle = get_the_archive_description();
 }
+get_template_part( 'template-parts/breadcrumbs' );
 if ( $archive_title || $archive_subtitle ) {
 	?>
 

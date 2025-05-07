@@ -26,6 +26,9 @@ Description
 
 == Changelog ==
 
+= 1.1.1 - 2025-05-07 =
+* Added breadcrumbs.
+
 = 1.1.0 - 2024-09-21 =
 * A serie has been shown.
 

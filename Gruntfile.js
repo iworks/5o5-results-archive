@@ -39,10 +39,6 @@ module.exports = function(grunt) {
             "assets/css/frontend/layout.css": "assets/sass/frontend/layout.scss",
             "assets/css/frontend/content.css": "assets/sass/frontend/content.scss",
             /**
-             * plugins integration
-             */
-            "assets/css/frontend/plugin-fleet.css": "assets/sass/frontend/plugins/fleet.scss",
-            /**
              * Last from regulars
              */
             "assets/css/frontend/font-family.css": "assets/sass/frontend/font-family.scss",

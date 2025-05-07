@@ -125,6 +125,7 @@ body {
 					justify-content: space-between;
 				}
 			}
+
 			&.post {
 				&-navigation {
 					padding: {
@@ -187,3 +188,5 @@ footer {
 @import 'content/front-page';
 @import 'content/search';
 @import 'content/lds-spinner';
+@import 'plugins/fleet';
+@import 'plugins/breadcrumb-navxt';
