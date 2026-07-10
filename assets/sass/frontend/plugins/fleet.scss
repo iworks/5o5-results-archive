@@ -265,6 +265,13 @@ body {
 							}
 						}
 					}
+					&[href*="flickr.com"] {
+						&:before {
+							background: {
+								@include icon('brands/flickr.com.svg');
+							}
+						}
+					}
 				}
 			}
 		}
