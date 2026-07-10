@@ -11,7 +11,18 @@ if ( is_tax() ) {
 
 if ( have_posts() ) {
 
-	if ( is_post_type_archive( 'iworks_fleet_result' ) ) {
+	if ( is_tax( 'iworks_fleet_location' ) ) {
+		echo '<details>';
+		printf( '<summary>%s</summary>', esc_html__( 'Show Years Filter', 'fleet' ) );
+		echo do_shortcode(
+			sprintf(
+				'[fleet_regattas_list_years title="0" flags="1" year="%s" location="%s"]',
+				intval( get_query_var( 'iworks_fleet_result_year' ) ),
+				get_query_var( 'iworks_fleet_location' )
+			)
+		);
+		echo '</details>';
+	} elseif ( is_post_type_archive( 'iworks_fleet_result' ) ) {
 		echo do_shortcode(
 			sprintf(
 				'[fleet_regattas_list_countries title="0" flags="1" year="%s"]',
@@ -19,7 +30,6 @@ if ( have_posts() ) {
 			)
 		);
 	}
-
 	?>
 <article>
 	<div class="post-inner thin ">

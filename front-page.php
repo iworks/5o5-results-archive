@@ -21,21 +21,27 @@ get_header();
 		</header><!-- .entry-header -->
 		<div class="entry-content">
 <?php
-echo apply_filters( 'int505_archive_last_results', '' );
-echo do_shortcode( '[fleet_regattas_list_years]' );
-echo do_shortcode( '[fleet_regattas_list_countries]' );
-?>
+if ( isset( $_REQUEST['last-changes'] ) ) {
+	get_template_part( 'template-parts/last-changes' );
+} else {
+	echo apply_filters( 'int505_archive_last_results', '' );
+	echo do_shortcode( '[fleet_regattas_list_years]' );
+	echo do_shortcode( '[fleet_regattas_list_countries]' );
+	?>
 <aside class="fleet-stats">
-<?php
-printf(
-	'<h2 class="fleet-stats-header">%s</h2>',
-	esc_html__( 'Statistics', '5o5-results-archive' )
-);
-echo '<ul class="fleet-stats">';
-echo apply_filters( 'int505_archive_stats_table_row', '' );
-echo '</ul>';
-?>
+	<?php
+	printf(
+		'<h2 class="fleet-stats-header">%s</h2>',
+		esc_html__( 'Statistics', '5o5-results-archive' )
+	);
+	echo '<ul class="fleet-stats">';
+	echo apply_filters( 'int505_archive_stats_table_row', '' );
+	echo '</ul>';
+	?>
 </aside>
+	<?php
+}
+?>
 		</div><!-- .entry-content -->
 		<footer class="entry-footer">
 		</footer><!-- .entry-footer -->

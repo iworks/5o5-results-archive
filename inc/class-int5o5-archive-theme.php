@@ -64,6 +64,55 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		 * Integration: OG — Better Share on Social Media
 		 */
 		add_filter( 'og_og_image_value', array( $this, 'filter_og_og_image_value_for_single_person' ) );
+		/**
+		 * fleet plugin
+		 */
+		add_filter( 'iworks_fleet_boat_hull_image', array( $this, 'filter_iworks_fleet_boat_hull_image' ) );
+		add_filter( 'og_og_array', array( $this, 'filter_og_og_array' ) );
+		/**
+		 * remove default styles
+		 */
+		add_action( 'init', array( $this, 'remove_default_wordpress_styles' ), PHP_INT_MAX );
+		add_filter( 'should_load_separate_core_block_assets', '__return_false', 99 );
+	}
+
+	private function map_hull_to_svg( $value ) {
+		$svg = false;
+		switch ( intval( $value ) ) {
+			case 8535:
+				$svg = true;
+				break;
+		}
+		if ( $svg ) {
+			$svg = sprintf( '/assets/images/hulls/%06d.svg', $value );
+		}
+		return $svg;
+	}
+
+	/**
+	 * custom hull images
+	 */
+	public function filter_iworks_fleet_boat_hull_image( $image ) {
+		if ( is_singular( 'iworks_fleet_boat' ) ) {
+			$svg = $this->map_hull_to_svg( get_the_title() );
+			if ( $svg ) {
+				$src = get_template_directory() . $svg;
+				if ( file_exists( $src ) && is_readable( $src ) ) {
+					return file_get_contents( $src );
+				}
+			}
+		}
+		return $image;
+	}
+
+	public function filter_og_og_array( $data ) {
+		if ( is_singular( 'iworks_fleet_boat' ) ) {
+			$svg = $this->map_hull_to_svg( get_the_title() );
+			if ( $svg ) {
+				$data['image'] = get_template_directory_uri() . $svg;
+			}
+		}
+		return $data;
 	}
 
 	public function iworks_pwa_offline_urls_set( $set ) {
@@ -313,5 +362,16 @@ class Int5o5_Archive_Theme extends Int5o5_Archive {
 		}
 		return $value;
 	}
-}
 
+	/**
+	 * Remove default WordPress styles to improve performance.
+	 *
+	 * @since 1.0.0
+	 * @return void
+	 */
+	public function remove_default_wordpress_styles() {
+		remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
+		remove_action( 'wp_footer', 'wp_enqueue_global_styles', 1 );
+		remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
+	}
+}

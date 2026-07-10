@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: OPI Jobs 0.0.1.1599813946548\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/5o5-results-"
 "archive\n"
-"POT-Creation-Date: 2024-09-10 08:53:21+00:00\n"
+"POT-Creation-Date: 2026-03-11 12:26:19+00:00\n"
 "PO-Revision-Date: 2020-11-19 13:31+0100\n"
 "Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
 "Language-Team: \n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "Results"
 msgstr ""
 
-#: front-page.php:32
+#: front-page.php:35
 msgid "Statistics"
 msgstr ""
 
@@ -48,19 +48,19 @@ msgstr ""
 msgid "Skip to content"
 msgstr "Przejdź do treści"
 
-#: inc/class-int5o5-archive-theme.php:235
+#: inc/class-int5o5-archive-theme.php:284
 msgid "unknown"
 msgstr ""
 
-#: inc/class-int5o5-archive-theme.php:241
+#: inc/class-int5o5-archive-theme.php:290
 msgid "Last update: %s"
 msgstr ""
 
-#: inc/class-int5o5-archive-theme.php:290
+#: inc/class-int5o5-archive-theme.php:339
 msgid "Primary"
 msgstr "Główny"
 
-#: inc/class-int5o5-archive-theme.php:295
+#: inc/class-int5o5-archive-theme.php:344
 msgid "Footer"
 msgstr ""
 
@@ -93,11 +93,11 @@ msgstr "Zostaw komentarz<span class=\"screen-reader-text\"> do %s</span>"
 msgid "Search Results for: %s"
 msgstr "Wyniki wyszukiwania dla: %s"
 
-#: single.php:20
+#: single.php:21
 msgid "Previous:"
 msgstr "Poprzedni:"
 
-#: single.php:21
+#: single.php:22
 msgid "Next:"
 msgstr "Następny:"
 
@@ -193,7 +193,11 @@ msgstr ""
 msgid "Last known start"
 msgstr ""
 
-#: template-parts/5o5-archive.php:47
+#: template-parts/5o5-archive.php:16
+msgid "Show Years Filter"
+msgstr ""
+
+#: template-parts/5o5-archive.php:57
 msgid "search again"
 msgstr ""
 
@@ -233,6 +237,11 @@ msgid ""
 "searching can help."
 msgstr ""
 "Wygląda na to, że szukana strona nie istnieje. Być może warto jej poszukać."
+
+#: template-parts/last-changes.php:1
+#, fuzzy
+msgid "Last Changes"
+msgstr "Zapisz zmiany"
 
 #: template-parts/not-authorized.php:2
 msgid "Your account is not authorized to manage listing."
@@ -508,9 +517,6 @@ msgstr ", "
 
 #~ msgid "Retype new password"
 #~ msgstr "Powtórz nowe hasło"
-
-#~ msgid "Save changes"
-#~ msgstr "Zapisz zmiany"
 
 #~ msgid "Cancel"
 #~ msgstr "Anuluj"

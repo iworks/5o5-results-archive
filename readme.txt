@@ -26,6 +26,9 @@ Description
 
 == Changelog ==
 
+= 1.1.2 - 2025-10-13 =
+* Removed default WordPress styles.
+
 = 1.1.1 - 2025-05-07 =
 * Added breadcrumbs.
 
