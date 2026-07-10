@@ -258,6 +258,13 @@ body {
 							}
 						}
 					}
+					&[href*="smugmug.com"] {
+						&:before {
+							background: {
+								@include icon('brands/smugmug.com.svg');
+							}
+						}
+					}
 				}
 			}
 		}
